@@ -56,6 +56,52 @@ The Moon Society's voice should convey **credible enthusiasm**. We are technical
 
 The Moon Society logo is a horizontal wordmark featuring the text "THE MOON SOCIETY" with a rendered lunar disc positioned behind the word "MOON." The word "MOON" appears in a heavy/black weight, while "THE" and "SOCIETY" use a lighter weight, creating visual hierarchy through contrast. A trademark symbol (™) appears after "SOCIETY."
 
+### Logo File Inventory
+
+All logo files are located in this repository at [`assets/logos/`](assets/logos/). The following table describes each file and its intended use.
+
+#### For dark backgrounds (Space Cadet Blue, Near-Black, Black)
+
+| File | Format | Size | Description |
+|------|--------|------|-------------|
+| `MoonSoc_TransWhite_Print.png` | PNG, transparent | 99 KB | **Primary web and print logo.** White text, lunar disc on transparent background. High resolution, suitable for print and large digital displays. Use this for website headers, presentation slides, and any dark-background placement. |
+| `MoonSocLogo-Black-440x190.jpg` | JPG, solid black bg | 19 KB | White text wordmark on solid black background. Use only where the background is exactly black — the solid black rectangle will be visible on any other color. 440×190px, web-optimized. |
+| `MoonSoc_Logo_Blank.png` | PNG, solid black bg | 26 KB | White text wordmark on solid black background. Same constraint as above — visible black rectangle on non-black backgrounds. Higher quality than the JPG. |
+| `MoonSoc_Logo.png` | PNG, dark bg built-in | 10 KB | Small thumbnail version of the white-text wordmark. Suitable for favicons or very small placements only. Too low-resolution for headers. |
+
+#### For light backgrounds (White, light gray, Pinkish Off-White)
+
+| File | Format | Size | Description |
+|------|--------|------|-------------|
+| `MoonSocLogo-Trans-440x190.png` | PNG, transparent | 23 KB | **Primary light-background logo.** Black text, lunar disc on transparent background. 440×190px, web-optimized. Ideal for light-background web headers, documents, and letterhead. |
+| `MoonSoc_TransBlack_Print.png` | PNG, transparent | 100 KB | Black text wordmark on transparent background. High resolution, suitable for print. |
+| `MoonSoc_Black_Print.png` | PNG | 95 KB | Black text wordmark, print resolution. For print production use. |
+| `MoonSoc_Black_Print.pdf` | PDF | 55 KB | Vector black wordmark for print production. Use for professional printing where vector output is required. |
+| `MoonSoc_White_Print.pdf` | PDF | 49 KB | Vector white wordmark for print production on dark substrates. |
+
+#### Legacy and special-purpose files
+
+| File | Format | Size | Description |
+|------|--------|------|-------------|
+| `MoonSocietyLogo2014.svg` | SVG | 41 KB | Vector source file (2014 version). Can be used for generating new size variants. Verify that it matches the current wordmark before use. |
+| `TMS_LOGO_06_2014_o710_0436_03.svg` | SVG | 42 KB | Original 2014 vector artwork with full metadata. Source file for reproduction. |
+| `MoonSoc_Logo_BLK_217x100.png` | PNG | 7 KB | Small black-text logo at 217×100px. Too small for most applications — use `MoonSocLogo-Trans-440x190.png` instead. |
+| `TMSlogo_blacktext_tranbg.gif` | GIF, transparent | 10 KB | Legacy GIF format. Do not use — replaced by the PNG transparent versions above. |
+| `TMSlogo_blacktext_tranbg_0.gif` | GIF, transparent | 10 KB | Duplicate of the above. Do not use. |
+
+#### Quick reference: Which logo file to use
+
+| Scenario | File |
+|----------|------|
+| Website header (dark background) | `MoonSoc_TransWhite_Print.png` |
+| Website header (light background) | `MoonSocLogo-Trans-440x190.png` |
+| Wild Apricot header | `MoonSoc_TransWhite_Print.png` |
+| Email template header | `MoonSocLogo-Black-440x190.jpg` (JPG for email compatibility) |
+| Print — dark substrate | `MoonSoc_White_Print.pdf` |
+| Print — light substrate | `MoonSoc_Black_Print.pdf` |
+| Social media avatar / favicon | `MoonSoc_Logo.png` (small) |
+| Generating new sizes | `MoonSocietyLogo2014.svg` (vector source) |
+
 ### Usage Rules
 
 **Clear space:** Maintain a minimum clear space around the logo equal to the height of the capital "T" in "THE" on all sides. No other text, graphics, or visual elements should intrude into this space.
