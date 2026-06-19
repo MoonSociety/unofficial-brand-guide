@@ -1,0 +1,337 @@
+{
+  "$schema": "./schemas/brand-v2.json",
+  "version": "2.0.0",
+  "generated": "2026-06-18",
+  "organization": {
+    "name": "The Moon Society",
+    "tagline": "Building a spacefaring civilization on the Moon.",
+    "website": "https://www.moonsociety.org",
+    "brandGuide": "https://branding.moonsociety.org",
+    "contact": "info@moonsociety.org",
+    "location": "United States (501(c)(3) nonprofit)",
+    "founded": 2000,
+    "mission": "The Moon Society is a membership-based space advocacy organization dedicated to furthering the development and settlement of the Moon. We bring together citizens, scientists, engineers, and enthusiasts who believe that a permanent human presence on the Moon is both achievable and essential."
+  },
+  "colors": {
+    "primary": [
+      {
+        "name": "Space Cadet Blue",
+        "token": "--ms-space-cadet",
+        "hex": "#13294B",
+        "pantone": "2767 C",
+        "rgb": { "r": 19, "g": 41, "b": 75 },
+        "hsl": { "h": 217, "s": 60, "l": 18 },
+        "usage": "Primary background, dominant brand color"
+      },
+      {
+        "name": "Gold",
+        "token": "--ms-gold",
+        "hex": "#FFCD00",
+        "pantone": "116 C",
+        "rgb": { "r": 255, "g": 205, "b": 0 },
+        "hsl": { "h": 48, "s": 100, "l": 50 },
+        "usage": "Primary accent, calls to action, highlights"
+      }
+    ],
+    "secondary": [
+      {
+        "name": "Cerulean",
+        "token": "--ms-cerulean",
+        "hex": "#00A3E0",
+        "pantone": "299 C",
+        "rgb": { "r": 0, "g": 163, "b": 224 },
+        "hsl": { "h": 196, "s": 100, "l": 44 },
+        "usage": "Links, interactive elements, secondary accent"
+      },
+      {
+        "name": "Blue",
+        "token": "--ms-blue",
+        "hex": "#006298",
+        "pantone": "7691 C",
+        "rgb": { "r": 0, "g": 98, "b": 152 },
+        "hsl": { "h": 201, "s": 100, "l": 30 },
+        "usage": "Mid-tone blue for depth and layering"
+      },
+      {
+        "name": "Cyan",
+        "token": "--ms-cyan",
+        "hex": "#6AD1E3",
+        "pantone": "310 C",
+        "rgb": { "r": 106, "g": 209, "b": 227 },
+        "hsl": { "h": 189, "s": 67, "l": 65 },
+        "usage": "Light accent, data visualization, tags"
+      },
+      {
+        "name": "Emerald",
+        "token": "--ms-emerald",
+        "hex": "#009775",
+        "pantone": "334 C",
+        "rgb": { "r": 0, "g": 151, "b": 117 },
+        "hsl": { "h": 166, "s": 100, "l": 30 },
+        "usage": "Success states, positive indicators"
+      }
+    ],
+    "neutral": [
+      {
+        "name": "White",
+        "token": "--ms-white",
+        "hex": "#FFFFFF",
+        "rgb": { "r": 255, "g": 255, "b": 255 },
+        "usage": "Primary text on dark backgrounds"
+      },
+      {
+        "name": "Cool Gray 2",
+        "token": "--ms-gray-100",
+        "hex": "#D0D0CE",
+        "pantone": "Cool Gray 2 C",
+        "rgb": { "r": 208, "g": 208, "b": 206 },
+        "usage": "Subtle borders, dividers on dark mode"
+      },
+      {
+        "name": "Cool Gray 5",
+        "token": "--ms-gray-200",
+        "hex": "#B1B3B3",
+        "pantone": "Cool Gray 5 C",
+        "rgb": { "r": 177, "g": 179, "b": 179 },
+        "usage": "Secondary text on dark backgrounds"
+      },
+      {
+        "name": "Cool Gray 8",
+        "token": "--ms-gray-300",
+        "hex": "#888B8D",
+        "pantone": "Cool Gray 8 C",
+        "rgb": { "r": 136, "g": 139, "b": 141 },
+        "usage": "Muted text, placeholder text"
+      },
+      {
+        "name": "Cool Gray 11",
+        "token": "--ms-gray-400",
+        "hex": "#53565A",
+        "pantone": "Cool Gray 11 C",
+        "rgb": { "r": 83, "g": 86, "b": 90 },
+        "usage": "Borders and dividers on light backgrounds"
+      },
+      {
+        "name": "Near-Black",
+        "token": "--ms-near-black",
+        "hex": "#1D252D",
+        "pantone": "433 C",
+        "rgb": { "r": 29, "g": 37, "b": 45 },
+        "usage": "Deep background, slightly warmer than pure black"
+      },
+      {
+        "name": "Black",
+        "token": "--ms-black",
+        "hex": "#000000",
+        "rgb": { "r": 0, "g": 0, "b": 0 },
+        "usage": "Use sparingly; prefer Near-Black for large areas"
+      }
+    ],
+    "semantic": [
+      {
+        "name": "Success",
+        "token": "--ms-success",
+        "hex": "#009775",
+        "usage": "Success states and positive indicators (Emerald)"
+      },
+      {
+        "name": "Warning",
+        "token": "--ms-warning",
+        "hex": "#D29F13",
+        "usage": "Warnings and caution indicators (Dark Gold)"
+      },
+      {
+        "name": "Error",
+        "token": "--ms-error",
+        "hex": "#E84855",
+        "usage": "Errors and destructive actions"
+      }
+    ],
+    "extended": [
+      { "name": "Light Gold",       "token": "--ms-gold-light",  "hex": "#FAE053", "pantone": "113 C",  "usage": "Lighter gold variant for gradients or hover states" },
+      { "name": "Dark Gold",        "token": "--ms-gold-dark",   "hex": "#D29F13", "pantone": "7555 C", "usage": "Darker gold variant for text on light backgrounds" },
+      { "name": "Brownish Gold",    "token": "--ms-gold-brown",  "hex": "#967126", "pantone": "7558 C", "usage": "Warm accent for editorial or print applications" },
+      { "name": "Warm Gray 1",      "token": "--ms-warm-gray-1", "hex": "#D7D2CB", "pantone": "Warm Gray 1 C", "usage": "Warm neutral background alternative" },
+      { "name": "Warm Gray 7",      "token": "--ms-warm-gray-7", "hex": "#968C83", "pantone": "Warm Gray 7 C", "usage": "Warm neutral mid-tone" },
+      { "name": "Grayish Brown",    "token": "--ms-gray-brown",  "hex": "#5E514D", "pantone": "411 C",  "usage": "Warm neutral for text or accents" },
+      { "name": "Brown",           "token": "--ms-brown",        "hex": "#382F2D", "pantone": "412 C",  "usage": "Deep warm neutral" },
+      { "name": "Pinkish Off-White","token": "--ms-off-white-pink","hex": "#E5E1E6", "pantone": "663 C", "usage": "Soft warm background for special sections" },
+      { "name": "Chaise Mauve",     "token": "--ms-mauve",       "hex": "#C1B2B6", "pantone": "435 C",  "usage": "Warm accent" },
+      { "name": "Lavender",        "token": "--ms-lavender",     "hex": "#7B6469", "pantone": "437 C",  "usage": "Warm mid-tone accent" },
+      { "name": "Dark Cherry",      "token": "--ms-dark-cherry", "hex": "#453536", "pantone": "439 C",  "usage": "Deep warm accent" }
+    ],
+    "accessibility": [
+      { "foreground": "#FFFFFF", "background": "#13294B", "ratio": "14.5:1", "wcag": "AAA" },
+      { "foreground": "#FFCD00", "background": "#13294B", "ratio": "9.7:1",  "wcag": "AAA" },
+      { "foreground": "#D0D0CE", "background": "#13294B", "ratio": "9.4:1",  "wcag": "AAA" },
+      { "foreground": "#6AD1E3", "background": "#13294B", "ratio": "8.2:1",  "wcag": "AAA" },
+      { "foreground": "#00A3E0", "background": "#13294B", "ratio": "5.1:1",  "wcag": "AA" },
+      { "foreground": "#FFFFFF", "background": "#1D252D", "ratio": "15.5:1", "wcag": "AAA" },
+      { "foreground": "#FFCD00", "background": "#1D252D", "ratio": "10.3:1", "wcag": "AAA" },
+      { "foreground": "#00A3E0", "background": "#1D252D", "ratio": "5.4:1",  "wcag": "AA" },
+      { "foreground": "#13294B", "background": "#FFFFFF", "ratio": "14.5:1", "wcag": "AAA" },
+      { "foreground": "#1D252D", "background": "#FFFFFF", "ratio": "15.5:1", "wcag": "AAA" },
+      { "foreground": "#53565A", "background": "#FFFFFF", "ratio": "7.4:1",  "wcag": "AAA" },
+      { "foreground": "#006298", "background": "#FFFFFF", "ratio": "6.6:1",  "wcag": "AA" },
+      { "foreground": "#009775", "background": "#FFFFFF", "ratio": "3.7:1",  "wcag": "AA Large" },
+      { "foreground": "#00A3E0", "background": "#FFFFFF", "ratio": "2.9:1",  "wcag": "Fail" },
+      { "foreground": "#D29F13", "background": "#FFFFFF", "ratio": "2.4:1",  "wcag": "Fail" },
+      { "foreground": "#FFCD00", "background": "#FFFFFF", "ratio": "1.5:1",  "wcag": "Fail" }
+    ]
+  },
+  "typography": {
+    "fonts": [
+      {
+        "role": "display",
+        "family": "Syne",
+        "weights": [400, 600, 700, 800],
+        "fallbacks": ["sans-serif"],
+        "source": "https://fonts.google.com/specimen/Syne",
+        "usage": "Hero headlines, event titles, large promotional/display text (32px and above). Prefer 700–800.",
+        "lineHeight": 1.2
+      },
+      {
+        "role": "headings",
+        "family": "League Spartan",
+        "weights": [400, 500, 600, 700, 800, 900],
+        "fallbacks": ["Spartan", "Century Gothic", "Avenir Next", "Futura", "sans-serif"],
+        "source": "https://fonts.google.com/specimen/League+Spartan",
+        "usage": "Section headings (H1–H6), navigation labels, button text. Prefer 600–700.",
+        "lineHeight": 1.2
+      },
+      {
+        "role": "body",
+        "family": "Noto Sans",
+        "weights": [400, 600, 700],
+        "fallbacks": ["Verdana", "DejaVu Sans", "sans-serif"],
+        "source": "https://fonts.google.com/specimen/Noto+Sans",
+        "usage": "Paragraph text, list items, form labels, captions, general reading text. 16–18px, line-height 1.5–1.6.",
+        "lineHeight": 1.6
+      },
+      {
+        "role": "serif",
+        "family": "Palatino",
+        "weights": [400, 700],
+        "fallbacks": ["Palatino Linotype", "TeX Gyre Pagella", "Book Antiqua", "Garamond", "serif"],
+        "source": "https://www.ctan.org/pkg/tex-gyre-pagella",
+        "usage": "Long-form editorial content, pull quotes, formal documents, print publications.",
+        "lineHeight": 1.65
+      },
+      {
+        "role": "monospace",
+        "family": "Inconsolata",
+        "weights": [400, 700],
+        "fallbacks": ["Consolas", "Menlo", "Monaco", "monospace"],
+        "source": "https://fonts.google.com/specimen/Inconsolata",
+        "usage": "Code samples, technical specifications, fixed-width data, terminal references. Use sparingly.",
+        "lineHeight": 1.5
+      }
+    ],
+    "scale": {
+      "base": "16px",
+      "minimumBody": "14px",
+      "maxLineWidth": "65ch"
+    }
+  },
+  "logos": {
+    "primary-white": {
+      "file": "assets/logos/MoonSoc_TransWhite_Print.png",
+      "background": "dark",
+      "description": "Primary web and print logo. White text, lunar disc on transparent background. Use for website headers, slides, and any dark-background placement."
+    },
+    "primary-black": {
+      "file": "assets/logos/MoonSocLogo-Trans-440x190.png",
+      "background": "light",
+      "description": "Primary light-background logo. Black text, lunar disc on transparent background. 440x190px, web-optimized."
+    },
+    "primary-black-print": {
+      "file": "assets/logos/MoonSoc_TransBlack_Print.png",
+      "background": "light",
+      "description": "Black text wordmark on transparent background. High resolution, suitable for print."
+    },
+    "icon": {
+      "file": "assets/logos/MoonSoc_Logo.png",
+      "background": "any",
+      "description": "Small thumbnail version of the white-text wordmark. Suitable for favicons or very small placements only."
+    },
+    "email-black": {
+      "file": "assets/logos/MoonSocLogo-Black-440x190.jpg",
+      "background": "dark",
+      "description": "White text wordmark on solid black background. Use only where the background is exactly black (e.g. email templates). 440x190px."
+    },
+    "vector-2014": {
+      "file": "assets/logos/MoonSocietyLogo2014.svg",
+      "format": "SVG",
+      "background": "any",
+      "description": "Vector source file (2014 version) for generating new size variants. Verify it matches the current wordmark before use."
+    },
+    "vector-source": {
+      "file": "assets/logos/TMS_LOGO_06_2014_o710_0436_03.svg",
+      "format": "SVG",
+      "background": "any",
+      "description": "Original 2014 vector artwork with full metadata. Source file for reproduction."
+    },
+    "rules": {
+      "clearSpace": "Minimum clear space equal to the height of the capital 'T' in 'THE' on all sides.",
+      "minimumSize": { "digital": "200px wide", "print": "1.5in (38mm) wide" },
+      "prohibitions": [
+        "Do not alter the proportions or spacing of the wordmark",
+        "Do not change the colors of any element within the logo",
+        "Do not add effects such as drop shadows, outlines, glows, or gradients",
+        "Do not rotate or skew the logo",
+        "Do not place the logo on backgrounds that reduce legibility",
+        "Do not crop or partially obscure the lunar disc",
+        "Do not remove the trademark symbol"
+      ]
+    }
+  },
+  "favicons": {
+    "svg": "assets/favicons/favicon.svg",
+    "icon": "assets/logos/MoonSoc_Logo.png"
+  },
+  "voice": {
+    "traits": ["Authoritative", "Aspirational", "Inclusive", "Active"],
+    "toneKeywords": ["Credible", "Enthusiastic", "Grounded"],
+    "coreStatement": "The Moon Society's voice conveys credible enthusiasm. We are technically informed but never exclusionary, optimistic about humanity's future on the Moon but grounded in real engineering, science, and policy. We sound like a knowledgeable colleague who is genuinely excited about what they do and wants you to be part of it.",
+    "do": [
+      "Be authoritative, not academic — use precise language without unnecessary jargon",
+      "Be aspirational, not fantastical — advocate for real missions, technology, and timelines",
+      "Be inclusive, not insider — welcome people who discovered us yesterday",
+      "Be active, not passive — use language that reflects agency and momentum",
+      "Provide enough context that a motivated newcomer can follow technical terms"
+    ],
+    "dont": [
+      "Overuse 'lunar' as a modifier when 'Moon' works fine",
+      "Use sci-fi cliches ('boldly go', 'final frontier', 'to the stars')",
+      "Use breathless superlatives ('revolutionary', 'game-changing', 'unprecedented')",
+      "Use insider shorthand in public-facing text (MMM, LDC, WSD without explanation)"
+    ]
+  },
+  "subBrands": {
+    "ldc": {
+      "name": "LDC 2026",
+      "fullName": "Lunar Development Conference 2026",
+      "tagline": "The premier virtual conference on permanent lunar settlement.",
+      "description": "The Moon Society's annual conference series bringing together the global community working toward a permanent human presence on the Moon. LDC 2026 focuses on the surface and subsurface of the Moon, from geology and resource extraction to habitat design and human factors.",
+      "dates": "July 17–18, 2026",
+      "format": "Virtual",
+      "theme": "Surface and subsurface of the Moon",
+      "website": "https://ldc.moonsociety.org",
+      "logo": "assets/ldc/ldc-2026-logo.svg",
+      "inherits": "Uses the parent Moon Society color palette and typography system as its baseline while maintaining its own conference identity mark."
+    }
+  },
+  "resources": {
+    "brandJson": "https://branding.moonsociety.org/brand.json",
+    "llmsTxt": "https://branding.moonsociety.org/llms.txt",
+    "colorsCss": "https://branding.moonsociety.org/colors.css",
+    "colorsJson": "https://branding.moonsociety.org/colors.json",
+    "tokensJson": "https://branding.moonsociety.org/tokens.json",
+    "designSpec": "https://branding.moonsociety.org/spec",
+    "brandGuide": "https://branding.moonsociety.org/guide",
+    "logoBundle": "https://branding.moonsociety.org/logo",
+    "fonts": "https://branding.moonsociety.org/fonts",
+    "site": "https://branding.moonsociety.org",
+    "repo": "https://github.com/MoonSociety/unofficial-brand-guide"
+  }
+}

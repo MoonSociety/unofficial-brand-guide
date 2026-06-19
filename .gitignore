@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+site/node_modules/
+
+# Next.js build output
+site/.next/
+site/out/
+site/next-env.d.ts
+site/.vercel/
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# NOTE: site/public/ IS committed. Its brand files (brand.json, llms.txt,
+# colors.*, tokens.json, the .md docs, assets/, and the logo bundle zip) are
+# synced from the repo root by scripts/sync-assets.mjs and kept as a baseline so
+# `next dev` and standalone CI builds work before prebuild runs.

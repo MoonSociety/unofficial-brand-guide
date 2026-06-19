@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+  "$comment": "Lives in site/public/ so Next.js copies it to out/ (the SWA artifact root). Short-URL redirects mirror the brand archive's stable URLs.",
+
+  "routes": [
+    { "route": "/guide",  "redirect": "/moon-society-brand-guide.md", "statusCode": 301 },
+    { "route": "/spec",   "redirect": "/moon-society-design-spec.md", "statusCode": 301 },
+    { "route": "/logo",   "redirect": "/assets/downloads/moon-society-logo-bundle.zip", "statusCode": 301 },
+    { "route": "/colors", "redirect": "/colors.css", "statusCode": 301 },
+    { "route": "/tokens", "redirect": "/tokens.json", "statusCode": 301 },
+    { "route": "/json",   "redirect": "/brand.json", "statusCode": 301 },
+    { "route": "/llms",   "redirect": "/llms.txt", "statusCode": 301 },
+    { "route": "/fonts",  "redirect": "https://fonts.google.com/share?selection.family=Inconsolata:wght@400;700%7CLeague+Spartan:wght@400;500;600;700;800;900%7CNoto+Sans:wght@400;500;600;700%7CSyne:wght@400;600;700;800", "statusCode": 301 }
+  ],
+
+  "mimeTypes": {
+    ".md": "text/markdown; charset=utf-8",
+    ".webmanifest": "application/manifest+json"
+  },
+
+  "globalHeaders": {
+    "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  },
+
+  "responseOverrides": {
+    "404": { "rewrite": "/404.html", "statusCode": 404 }
+  },
+
+  "navigationFallback": {
+    "rewrite": "/404.html",
+    "exclude": [
+      "/assets/*",
+      "/_next/*",
+      "*.{ico,png,jpg,jpeg,svg,webp,css,js,json,xml,txt,md,pdf,zip,webmanifest}"
+    ]
+  }
+}

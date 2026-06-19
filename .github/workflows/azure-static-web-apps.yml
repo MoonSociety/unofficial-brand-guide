@@ -1,0 +1,57 @@
+name: Azure Static Web Apps CI/CD
+
+# Builds the Next.js showcase site in site/ (output: 'export' -> site/out/) and
+# deploys it to Azure Static Web Apps. The deployment token must be added as the
+# repo secret AZURE_STATIC_WEB_APPS_API_TOKEN (see site/DEPLOY.md).
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - master
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+          lfs: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (PR comments)
+          action: "upload"
+          # The site is a subdirectory of this brand archive. `app_build_command`
+          # (npm install + npm run build) runs the package.json `build` script,
+          # whose `prebuild` syncs brand assets from the repo root into site/public.
+          # Next.js 15 with output: 'export' writes static files to site/out/.
+          app_location: "site"
+          api_location: ""
+          output_location: "out"
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "close"

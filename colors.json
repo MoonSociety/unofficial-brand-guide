@@ -1,0 +1,27 @@
+{
+  "$schema": "./schemas/brand-v2.json#/properties/colors",
+  "primary": [
+    { "name": "Space Cadet Blue", "token": "--ms-space-cadet", "hex": "#13294B" },
+    { "name": "Gold",             "token": "--ms-gold",        "hex": "#FFCD00" }
+  ],
+  "secondary": [
+    { "name": "Cerulean", "token": "--ms-cerulean", "hex": "#00A3E0" },
+    { "name": "Blue",     "token": "--ms-blue",     "hex": "#006298" },
+    { "name": "Cyan",     "token": "--ms-cyan",     "hex": "#6AD1E3" },
+    { "name": "Emerald",  "token": "--ms-emerald",  "hex": "#009775" }
+  ],
+  "neutral": [
+    { "name": "White",       "token": "--ms-white",      "hex": "#FFFFFF" },
+    { "name": "Cool Gray 2", "token": "--ms-gray-100",   "hex": "#D0D0CE" },
+    { "name": "Cool Gray 5", "token": "--ms-gray-200",   "hex": "#B1B3B3" },
+    { "name": "Cool Gray 8", "token": "--ms-gray-300",   "hex": "#888B8D" },
+    { "name": "Cool Gray 11","token": "--ms-gray-400",   "hex": "#53565A" },
+    { "name": "Near-Black",  "token": "--ms-near-black",  "hex": "#1D252D" },
+    { "name": "Black",       "token": "--ms-black",       "hex": "#000000" }
+  ],
+  "semantic": [
+    { "name": "Success", "token": "--ms-success", "hex": "#009775" },
+    { "name": "Warning", "token": "--ms-warning", "hex": "#D29F13" },
+    { "name": "Error",   "token": "--ms-error",   "hex": "#E84855" }
+  ]
+}

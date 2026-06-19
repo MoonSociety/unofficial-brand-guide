@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://branding.moonsociety.org/schemas/brand-v2.json",
+  "title": "Moon Society Brand Manifest v2",
+  "description": "Schema for the (unofficial) Moon Society brand.json manifest. Validates the v2.x family.",
+  "type": "object",
+  "required": ["version", "organization", "colors", "typography", "logos", "voice"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": {
+      "type": "string",
+      "pattern": "^2\\.\\d+\\.\\d+$",
+      "description": "SemVer. Must be 2.x.y for this schema."
+    },
+    "generated": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date the manifest was generated."
+    },
+    "organization": {
+      "type": "object",
+      "required": ["name", "tagline", "website", "brandGuide", "mission"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "website": { "type": "string", "format": "uri" },
+        "brandGuide": { "type": "string", "format": "uri" },
+        "contact": { "type": "string" },
+        "location": { "type": "string" },
+        "founded": { "type": "integer" },
+        "mission": { "type": "string" }
+      }
+    },
+    "colors": {
+      "type": "object",
+      "required": ["primary", "secondary", "neutral", "semantic", "accessibility"],
+      "additionalProperties": false,
+      "properties": {
+        "primary":   { "type": "array", "items": { "$ref": "#/$defs/color" }, "minItems": 1 },
+        "secondary": { "type": "array", "items": { "$ref": "#/$defs/color" } },
+        "neutral":   { "type": "array", "items": { "$ref": "#/$defs/color" } },
+        "semantic":  { "type": "array", "items": { "$ref": "#/$defs/color" } },
+        "extended":  { "type": "array", "items": { "$ref": "#/$defs/color" } },
+        "accessibility": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["foreground", "background", "ratio", "wcag"],
+            "additionalProperties": false,
+            "properties": {
+              "foreground": { "$ref": "#/$defs/hex" },
+              "background": { "$ref": "#/$defs/hex" },
+              "ratio": { "type": "string", "pattern": "^\\d+(\\.\\d+)?:1$" },
+              "wcag": { "type": "string", "enum": ["AA", "AA Large", "AAA", "AAA Large", "Fail"] }
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["fonts"],
+      "additionalProperties": false,
+      "properties": {
+        "fonts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["role", "family", "weights", "fallbacks", "source", "lineHeight"],
+            "additionalProperties": false,
+            "properties": {
+              "role": { "type": "string", "enum": ["display", "headings", "body", "serif", "monospace"] },
+              "family": { "type": "string" },
+              "weights": { "type": "array", "items": { "type": "integer", "minimum": 100, "maximum": 900 } },
+              "fallbacks": { "type": "array", "items": { "type": "string" } },
+              "source": { "type": "string" },
+              "usage": { "type": "string" },
+              "lineHeight": { "type": "number", "minimum": 0.8, "maximum": 3 }
+            }
+          }
+        },
+        "scale": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "logos": {
+      "type": "object",
+      "description": "Map of logo variants by id. Plus a 'rules' object with usage constraints.",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9_-]*$": {
+          "type": "object",
+          "required": ["file", "background", "description"],
+          "additionalProperties": false,
+          "properties": {
+            "file": { "type": "string" },
+            "svg": { "type": "string" },
+            "format": { "type": "string" },
+            "background": { "type": "string", "enum": ["light", "dark", "any"] },
+            "deprecated": { "type": "boolean" },
+            "description": { "type": "string" }
+          }
+        }
+      },
+      "properties": {
+        "rules": {
+          "type": "object",
+          "required": ["clearSpace", "minimumSize", "prohibitions"],
+          "additionalProperties": false,
+          "properties": {
+            "clearSpace": { "type": "string" },
+            "minimumSize": {
+              "type": "object",
+              "required": ["digital", "print"],
+              "additionalProperties": false,
+              "properties": {
+                "digital": { "type": "string" },
+                "print": { "type": "string" }
+              }
+            },
+            "prohibitions": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        }
+      }
+    },
+    "favicons": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "voice": {
+      "type": "object",
+      "required": ["traits", "toneKeywords", "coreStatement", "do", "dont"],
+      "additionalProperties": false,
+      "properties": {
+        "traits": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "toneKeywords": { "type": "array", "items": { "type": "string" } },
+        "coreStatement": { "type": "string" },
+        "do": { "type": "array", "items": { "type": "string" } },
+        "dont": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "subBrands": {
+      "type": "object",
+      "description": "Affiliated sub-brands that inherit the parent palette and typography.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "fullName": { "type": "string" },
+          "tagline": { "type": "string" },
+          "description": { "type": "string" },
+          "dates": { "type": "string" },
+          "format": { "type": "string" },
+          "theme": { "type": "string" },
+          "website": { "type": "string", "format": "uri" },
+          "logo": { "type": "string" },
+          "inherits": { "type": "string" }
+        }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "hex": {
+      "type": "string",
+      "pattern": "^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$"
+    },
+    "color": {
+      "type": "object",
+      "required": ["name", "token", "hex"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "token": { "type": "string", "pattern": "^--ms-[a-z][a-z0-9-]*$" },
+        "hex": { "$ref": "#/$defs/hex" },
+        "pantone": { "type": "string" },
+        "rgb": {
+          "type": "object",
+          "required": ["r", "g", "b"],
+          "additionalProperties": false,
+          "properties": {
+            "r": { "type": "integer", "minimum": 0, "maximum": 255 },
+            "g": { "type": "integer", "minimum": 0, "maximum": 255 },
+            "b": { "type": "integer", "minimum": 0, "maximum": 255 }
+          }
+        },
+        "hsl": {
+          "type": "object",
+          "required": ["h", "s", "l"],
+          "additionalProperties": false,
+          "properties": {
+            "h": { "type": "integer", "minimum": 0, "maximum": 360 },
+            "s": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "l": { "type": "integer", "minimum": 0, "maximum": 100 }
+          }
+        },
+        "usage": { "type": "string" }
+      }
+    }
+  }
+}

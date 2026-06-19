@@ -1,0 +1,113 @@
+# The Moon Society — LLM/AI Brand Consumption Guidelines (unofficial)
+
+> This file provides concise, machine-readable brand guidance for AI systems.
+> Full machine-readable manifest: https://branding.moonsociety.org/brand.json
+> Follows the llms.txt convention: https://llmstxt.org/
+>
+> NOTE: This is an unofficial, community-maintained brand reference. The Moon
+> Society and the Moon Society logo are trademarks of The Moon Society, Incorporated.
+
+## Organization
+
+- Name: The Moon Society
+- Tagline: "Building a spacefaring civilization on the Moon."
+- Founded: 2000 (501(c)(3) nonprofit)
+- Website: https://www.moonsociety.org
+- Brand guide: https://branding.moonsociety.org
+- Contact: info@moonsociety.org
+
+## Mission
+
+The Moon Society is a membership-based space advocacy organization dedicated
+to furthering the development and settlement of the Moon. We bring together
+citizens, scientists, engineers, and enthusiasts who believe that a permanent
+human presence on the Moon is both achievable and essential.
+
+## Canonical Colors
+
+Use these exact hex values. Do not approximate or substitute.
+
+Primary:
+- Space Cadet Blue:  #13294B  — primary background, dominant brand color
+- Gold:              #FFCD00  — primary accent, CTAs, highlights
+
+Secondary:
+- Cerulean:          #00A3E0  — links, interactive elements
+- Blue:              #006298  — mid-tone blue for depth
+- Cyan:              #6AD1E3  — light accent, data viz, tags
+- Emerald:           #009775  — success, positive indicators
+
+Neutrals:
+- White:             #FFFFFF
+- Near-Black:        #1D252D  — deep background (preferred over pure black)
+
+CSS tokens (importable from /colors.css):
+  --ms-space-cadet, --ms-gold, --ms-cerulean, --ms-blue, --ms-cyan,
+  --ms-emerald, --ms-white, --ms-near-black
+
+NEGATIVE GUIDANCE (prevent confidently-wrong AI output):
+- Gold (#FFCD00) on White fails WCAG contrast (1.5:1). Never use gold text on white.
+- Do not place the primary white-text wordmark on light or busy backgrounds.
+- Prefer "Moon" over "lunar" as a modifier where either works.
+
+## Typography
+
+- Display: Syne, weights 400–800 (prefer 700–800), 32px and above only
+- Headings: League Spartan, weights 400–900 (prefer 600–700), line-height 1.2
+- Body: Noto Sans, weights 400–700, line-height 1.5–1.6
+- Serif (editorial/print): Palatino / TeX Gyre Pagella, line-height 1.65
+- Monospace/code: Inconsolata, weights 400–700 (use sparingly)
+- Source: Google Fonts (https://branding.moonsociety.org/fonts)
+
+## Voice & Tone
+
+Voice: credible enthusiasm — a knowledgeable colleague who is genuinely excited
+and wants you to be part of it. Traits: Authoritative, Aspirational, Inclusive, Active.
+
+Do:
+- Be authoritative, not academic — precise language without unnecessary jargon
+- Be aspirational, not fantastical — real missions, technology, timelines
+- Be inclusive, not insider — welcome newcomers; explain acronyms
+- Be active, not passive — convey agency and momentum
+
+Don't:
+- Overuse "lunar" when "Moon" works fine
+- Use sci-fi cliches ("boldly go", "final frontier", "to the stars")
+- Use breathless superlatives ("revolutionary", "game-changing")
+- Use insider shorthand (MMM, LDC, WSD) without explanation
+
+## Logo
+
+- Primary (white):  /assets/logos/MoonSoc_TransWhite_Print.png  — dark backgrounds
+- Primary (black):  /assets/logos/MoonSocLogo-Trans-440x190.png — light backgrounds
+- Icon:             /assets/logos/MoonSoc_Logo.png             — favicons, tight spaces
+
+Logo bundle (ZIP): https://branding.moonsociety.org/logo
+
+Prohibitions: Do not alter proportions, recolor, add shadows/gradients, rotate,
+skew, crop the lunar disc, or remove the trademark symbol.
+Clear space: Equal to the height of the capital "T" in "THE" on all sides.
+Minimum size: 200px wide digital / 1.5in (38mm) print.
+
+## Sub-brands
+
+- LDC 2026 (Lunar Development Conference): July 17–18, 2026, virtual. Theme:
+  surface and subsurface of the Moon. https://ldc.moonsociety.org
+  Inherits the parent palette and typography; keeps its own conference mark.
+
+## Stable Short URLs
+
+- /guide   — long-form brand guide (markdown)
+- /spec    — design specification (markdown)
+- /logo    — logo bundle (zip)
+- /colors  — CSS custom properties (--ms-*)
+- /tokens  — W3C design tokens
+- /fonts   — Google Fonts share URL
+- /json    — machine-readable manifest
+- /llms    — this file
+
+All resolve via https://branding.moonsociety.org.
+
+## Repository
+
+Source: https://github.com/MoonSociety/unofficial-brand-guide
