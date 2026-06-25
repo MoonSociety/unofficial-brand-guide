@@ -56,6 +56,12 @@ The Moon Society's voice should convey **credible enthusiasm**. We are technical
 
 The Moon Society logo is a horizontal wordmark featuring the text "THE MOON SOCIETY" with a rendered lunar disc positioned behind the word "MOON." The word "MOON" appears in a heavy/black weight, while "THE" and "SOCIETY" use a lighter weight, creating visual hierarchy through contrast. A trademark symbol (™) appears after "SOCIETY."
 
+### Canonical Logo (Source of Truth)
+
+The **canonical Moon Society wordmark** is the vector file [`assets/logos/MoonSocietyLogo2014.svg`](assets/logos/MoonSocietyLogo2014.svg), maintained upstream at `https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg`. Use this SVG anywhere SVG is supported, and as the master for generating any new raster sizes. The companion disc/face-only mark is [`assets/logos/TMS_LOGO_Face_Only_S619_01.svg`](assets/logos/TMS_LOGO_Face_Only_S619_01.svg) (favicons, avatars, small icons).
+
+> **Important:** The canonical SVG does **not** render a visible trademark (™) glyph. Several legacy raster files in the inventory below *do* include a ™ — those are **non-canonical**. Prefer the canonical SVG; do not add a ™ to it. A dedicated light-background SVG (dark wordmark text) is not yet available — for light backgrounds use the transparent black-text PNGs below until a light SVG is produced from the vector source.
+
 ### Logo File Inventory
 
 All logo files are located in this repository at [`assets/logos/`](assets/logos/). The following table describes each file and its intended use.
@@ -83,7 +89,8 @@ All logo files are located in this repository at [`assets/logos/`](assets/logos/
 
 | File | Format | Size | Description |
 |------|--------|------|-------------|
-| `MoonSocietyLogo2014.svg` | SVG | 41 KB | Vector source file (2014 version). Can be used for generating new size variants. Verify that it matches the current wordmark before use. |
+| `MoonSocietyLogo2014.svg` | SVG | 41 KB | **Canonical wordmark (source of truth).** Vector file maintained upstream at strabo.moonsociety.org. White wordmark + lunar disc for dark backgrounds. Use wherever SVG is supported and to generate new raster sizes. No ™ glyph. |
+| `TMS_LOGO_Face_Only_S619_01.svg` | SVG | 19 KB | Lunar disc / face-only mark (no wordmark). For favicons, avatars, and small icon placements. |
 | `TMS_LOGO_06_2014_o710_0436_03.svg` | SVG | 42 KB | Original 2014 vector artwork with full metadata. Source file for reproduction. |
 | `MoonSoc_Logo_BLK_217x100.png` | PNG | 7 KB | Small black-text logo at 217×100px. Too small for most applications — use `MoonSocLogo-Trans-440x190.png` instead. |
 | `TMSlogo_blacktext_tranbg.gif` | GIF, transparent | 10 KB | Legacy GIF format. Do not use — replaced by the PNG transparent versions above. |
@@ -118,7 +125,7 @@ All logo files are located in this repository at [`assets/logos/`](assets/logos/
 - Rotate or skew the logo
 - Place the logo on backgrounds that reduce legibility
 - Crop or partially obscure the lunar disc
-- Remove the ™ symbol
+- Add a ™ symbol to the canonical SVG wordmark, or substitute the legacy ™-bearing raster files for it
 
 ---
 

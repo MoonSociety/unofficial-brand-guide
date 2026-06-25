@@ -78,8 +78,10 @@ Don't:
 
 ## Logo
 
-- Primary (white):  /assets/logos/MoonSoc_TransWhite_Print.png  — dark backgrounds
-- Primary (black):  /assets/logos/MoonSocLogo-Trans-440x190.png — light backgrounds
+- Canonical (SVG):  /assets/logos/MoonSocietyLogo2014.svg        — source of truth; white wordmark for dark backgrounds; no TM glyph (upstream: strabo.moonsociety.org)
+- Face-only (SVG):  /assets/logos/TMS_LOGO_Face_Only_S619_01.svg  — disc/icon mark for favicons and avatars
+- Primary (white):  /assets/logos/MoonSoc_TransWhite_Print.png  — dark backgrounds (raster)
+- Primary (black):  /assets/logos/MoonSocLogo-Trans-440x190.png — light backgrounds (raster)
 - Icon:             /assets/logos/MoonSoc_Logo.png             — favicons, tight spaces
 
 Logo bundle (ZIP): https://branding.moonsociety.org/logo

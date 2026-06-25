@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/brand-v2.json",
   "version": "2.0.0",
-  "generated": "2026-06-18",
+  "generated": "2026-06-25",
   "organization": {
     "name": "The Moon Society",
     "tagline": "Building a spacefaring civilization on the Moon.",
@@ -259,17 +259,26 @@
       "background": "dark",
       "description": "White text wordmark on solid black background. Use only where the background is exactly black (e.g. email templates). 440x190px."
     },
-    "vector-2014": {
+    "canonical-svg": {
       "file": "assets/logos/MoonSocietyLogo2014.svg",
       "format": "SVG",
+      "background": "dark",
+      "canonical": true,
+      "source": "https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg",
+      "description": "CANONICAL Moon Society wordmark. Vector source of truth — use this for the logo wherever SVG is supported, and to generate any new raster sizes. White wordmark with lunar disc, designed for dark backgrounds. Does NOT render a visible trademark (TM) glyph; the raster variants that include a TM are legacy and non-canonical."
+    },
+    "face-only": {
+      "file": "assets/logos/TMS_LOGO_Face_Only_S619_01.svg",
+      "format": "SVG",
       "background": "any",
-      "description": "Vector source file (2014 version) for generating new size variants. Verify it matches the current wordmark before use."
+      "source": "https://strabo.moonsociety.org/images/moonsoc-logo/TMS_LOGO_Face_Only_S619_01.svg",
+      "description": "Lunar disc / face-only mark (no wordmark). Use for favicons, avatars, and small icon placements."
     },
     "vector-source": {
       "file": "assets/logos/TMS_LOGO_06_2014_o710_0436_03.svg",
       "format": "SVG",
       "background": "any",
-      "description": "Original 2014 vector artwork with full metadata. Source file for reproduction."
+      "description": "Original 2014 vector artwork with full metadata. Historical source for reproduction; prefer canonical-svg for current use."
     },
     "rules": {
       "clearSpace": "Minimum clear space equal to the height of the capital 'T' in 'THE' on all sides.",
@@ -281,7 +290,7 @@
         "Do not rotate or skew the logo",
         "Do not place the logo on backgrounds that reduce legibility",
         "Do not crop or partially obscure the lunar disc",
-        "Do not remove the trademark symbol"
+        "Use the canonical SVG wordmark, which does not render a visible trademark (TM) glyph; do not add a TM to it or substitute the legacy TM-bearing raster files"
       ]
     }
   },
