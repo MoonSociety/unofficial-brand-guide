@@ -10,8 +10,9 @@
     "start": "next start",
     "lint": "next lint",
     "check": "tsc --noEmit",
+    "generate": "node ../scripts/generate-derived.mjs",
     "sync": "node ../scripts/sync-assets.mjs",
-    "prebuild": "node ../scripts/sync-assets.mjs"
+    "prebuild": "node ../scripts/generate-derived.mjs && node ../scripts/sync-assets.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.7",

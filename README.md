@@ -69,11 +69,11 @@ A knowledgeable colleague who is genuinely excited and wants you to be part of i
 
 ⚠ Gold (`#FFCD00`) on white fails WCAG contrast — never use gold text on white.
 
-**Typography:**
-- Display: Syne (700, 800) — 32px and above
+**Typography** (all Google Fonts CDN — no system/self-hosted faces):
+- Display: League Spartan (800) — 32px and above (same family as headings)
 - Headings: League Spartan (600, 700)
 - Body: Noto Sans (400, 600)
-- Serif (editorial): Palatino / TeX Gyre Pagella
+- Serif (editorial): Spectral (400–700)
 - Code: Inconsolata (400, 700)
 
 **Sub-brand:** [LDC 2026](https://ldc.moonsociety.org) — Lunar Development Conference,
@@ -84,13 +84,16 @@ July 17–18 2026 (virtual). Inherits the parent palette and type; keeps its own
 
 ```
 .
-├── brand.json                  v2.0.0 manifest — machine-readable source of truth
-├── llms.txt                    Brand summary for AI consumers (llms.txt convention)
-├── colors.css                  CSS custom properties (--ms-*)
-├── colors.json                 Same color data, standalone
-├── tokens.json                 W3C Design Tokens format
+├── brand.json                  v2.x manifest — the single hand-edited source of truth
+├── llms.txt                    GENERATED — brand summary for AI consumers (llms.txt convention)
+├── colors.css                  GENERATED — CSS custom properties (--ms-*)
+├── colors.json                 GENERATED — same color data, standalone
+├── tokens.json                 GENERATED — W3C Design Tokens format
 ├── moon-society-brand-guide.md Canonical long-form brand guide
 ├── moon-society-design-spec.md Canonical long-form design specification
+├── LICENSE                     MIT — covers code/tooling only
+├── NOTICE                      Brand/logo assets remain TMS property
+├── CONTRIBUTING.md             "Edit brand.json first, regenerate, validate" flow
 ├── assets/
 │   ├── logos/                  Moon Society logo variants
 │   ├── ldc/                    LDC sub-brand mark
@@ -98,10 +101,11 @@ July 17–18 2026 (virtual). Inherits the parent palette and type; keeps its own
 ├── schemas/
 │   └── brand-v2.json           JSON Schema for brand.json
 ├── scripts/
-│   ├── sync-assets.mjs         Mirrors assets into site/public for deploy
-│   └── validate-manifest.mjs   Validates brand.json against the schema
+│   ├── generate-derived.mjs    brand.json → colors.css/json, tokens.json, llms.txt (--check for CI)
+│   ├── sync-assets.mjs         Mirrors files into site/public (+ /v2 immutable snapshots)
+│   └── validate-manifest.mjs   Validates brand.json against the schema; recomputes contrast ratios
 ├── site/                       Showcase website (Next.js 15 → Azure Static Web Apps)
-└── .github/workflows/          CI/CD (Azure Static Web Apps)
+└── .github/workflows/          CI/CD (Azure Static Web Apps deploy + manifest validate)
 ```
 
 The showcase website that backs `branding.moonsociety.org` is the Next.js 15 app in
@@ -112,5 +116,6 @@ The showcase website that backs `branding.moonsociety.org` is the Next.js 15 app
 
 This is an **unofficial**, community-maintained resource. The Moon Society and the
 Moon Society logo are trademarks of The Moon Society, Incorporated. Logo and brand
-assets remain the property of The Moon Society; the tooling/code in this repository
-(`scripts/`, `schemas/`, `site/`) is provided for community use.
+assets remain the property of The Moon Society (see [`NOTICE`](NOTICE)); the
+tooling/code in this repository (`scripts/`, `schemas/`, `site/`, and the manifest
+format) is provided for community use under the [MIT License](LICENSE).

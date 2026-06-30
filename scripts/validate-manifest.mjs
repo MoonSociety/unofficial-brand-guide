@@ -67,6 +67,48 @@ function validateStructurally() {
   console.log("[validate-manifest] (install 'ajv' + 'ajv-formats' for full schema validation.)");
 }
 
+// ── Contrast verification ────────────────────────────────────────────
+// Contrast is a pure function of two hex colors, so the hand-keyed ratios in
+// brand.json can be recomputed and verified. This runs regardless of AJV.
+function relativeLuminance(hex) {
+  const h = hex.replace("#", "");
+  const ch = [0, 2, 4].map((i) => {
+    const v = parseInt(h.slice(i, i + 2), 16) / 255;
+    return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * ch[0] + 0.7152 * ch[1] + 0.0722 * ch[2];
+}
+function contrastRatio(fg, bg) {
+  const L1 = relativeLuminance(fg);
+  const L2 = relativeLuminance(bg);
+  const [hi, lo] = L1 >= L2 ? [L1, L2] : [L2, L1];
+  return (hi + 0.05) / (lo + 0.05);
+}
+// Minimum ratio the stated WCAG label requires. "Fail" must genuinely fail AA normal.
+const WCAG_MIN = { AAA: 7, "AAA Large": 4.5, AA: 4.5, "AA Large": 3 };
+
+function checkContrast() {
+  const errors = [];
+  for (const a of manifest.colors?.accessibility ?? []) {
+    const computed = contrastRatio(a.foreground, a.background);
+    const stated = parseFloat(a.ratio);
+    if (Math.abs(Math.round(computed * 10) / 10 - stated) > 0.15) {
+      errors.push(`${a.foreground} on ${a.background}: stated ${a.ratio} but computed ${computed.toFixed(1)}:1`);
+    }
+    if (a.wcag === "Fail") {
+      if (computed >= 4.5) errors.push(`${a.foreground} on ${a.background}: labeled "Fail" but computes ${computed.toFixed(1)}:1 (passes AA)`);
+    } else if (WCAG_MIN[a.wcag] && computed + 0.05 < WCAG_MIN[a.wcag]) {
+      errors.push(`${a.foreground} on ${a.background}: labeled "${a.wcag}" (needs ≥${WCAG_MIN[a.wcag]}:1) but computes ${computed.toFixed(1)}:1`);
+    }
+  }
+  if (errors.length) {
+    console.error("[validate-manifest] accessibility ratios FAILED recomputation:\n");
+    for (const e of errors) console.error(`  ${e}`);
+    process.exit(1);
+  }
+  console.log(`[validate-manifest] all ${manifest.colors.accessibility.length} accessibility ratios verified by recomputation.`);
+}
+
 try {
   await validateWithAjv();
 } catch (e) {
@@ -77,3 +119,5 @@ try {
     process.exit(1);
   }
 }
+
+checkContrast();

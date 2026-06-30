@@ -7,7 +7,7 @@ import { Image as ImageIcon, Palette, Type, MessageSquare, Rocket, Download, Fil
 const quickLinks = [
   { title: "Logo", description: "Logo variants, clear space, and download options", icon: ImageIcon, href: "/logo", color: "text-cyan-400" },
   { title: "Colors", description: "Full palette with one-click copy and WCAG contrast", icon: Palette, href: "/colors", color: "text-[#FFCD00]" },
-  { title: "Typography", description: "Syne, League Spartan, Noto Sans, Inconsolata", icon: Type, href: "/typography", color: "text-emerald-400" },
+  { title: "Typography", description: "League Spartan, Noto Sans, Spectral, Inconsolata", icon: Type, href: "/typography", color: "text-emerald-400" },
   { title: "Voice & Tone", description: "Credible enthusiasm — how we sound", icon: MessageSquare, href: "/voice", color: "text-sky-400" },
   { title: "LDC 2026", description: "Lunar Development Conference sub-brand", icon: Rocket, href: "/ldc", color: "text-[#FFCD00]" },
   { title: "Downloads", description: "All brand assets organized for easy access", icon: Download, href: "/downloads", color: "text-rose-400" },

@@ -7,7 +7,7 @@ import { typographySpecs } from "@/lib/brand-data";
 export const metadata: Metadata = {
   title: "Typography",
   description:
-    "The Moon Society type system: Syne (display), League Spartan (headings), Noto Sans (body), Palatino (serif), and Inconsolata (monospace).",
+    "The Moon Society type system: League Spartan (display + headings), Noto Sans (body), Spectral (serif), and Inconsolata (monospace).",
   alternates: { canonical: "/typography" },
 };
 
@@ -22,10 +22,10 @@ export default function Typography() {
       <Card className="mb-10 bg-muted/30">
         <CardContent className="p-6">
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
-            <li><strong className="text-foreground">Display — Syne:</strong> hero headlines, 32px and above</li>
+            <li><strong className="text-foreground">Display — League Spartan:</strong> hero headlines, 32px and above (weight 800)</li>
             <li><strong className="text-foreground">Headings — League Spartan:</strong> H1–H6, nav, buttons</li>
             <li><strong className="text-foreground">Body — Noto Sans:</strong> paragraphs, UI, captions</li>
-            <li><strong className="text-foreground">Serif — Palatino:</strong> editorial, print, pull quotes</li>
+            <li><strong className="text-foreground">Serif — Spectral:</strong> editorial, print, pull quotes</li>
             <li><strong className="text-foreground">Monospace — Inconsolata:</strong> code, technical values</li>
           </ul>
         </CardContent>

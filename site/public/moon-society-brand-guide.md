@@ -56,6 +56,12 @@ The Moon Society's voice should convey **credible enthusiasm**. We are technical
 
 The Moon Society logo is a horizontal wordmark featuring the text "THE MOON SOCIETY" with a rendered lunar disc positioned behind the word "MOON." The word "MOON" appears in a heavy/black weight, while "THE" and "SOCIETY" use a lighter weight, creating visual hierarchy through contrast. A trademark symbol (™) appears after "SOCIETY."
 
+### Canonical Logo (Source of Truth)
+
+The **canonical Moon Society wordmark** is the vector file [`assets/logos/MoonSocietyLogo2014.svg`](assets/logos/MoonSocietyLogo2014.svg), maintained upstream at `https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg`. Use this SVG anywhere SVG is supported, and as the master for generating any new raster sizes. The companion disc/face-only mark is [`assets/logos/TMS_LOGO_Face_Only_S619_01.svg`](assets/logos/TMS_LOGO_Face_Only_S619_01.svg) (favicons, avatars, small icons).
+
+> **Important:** The canonical SVG does **not** render a visible trademark (™) glyph. Several legacy raster files in the inventory below *do* include a ™ — those are **non-canonical**. Prefer the canonical SVG; do not add a ™ to it. A dedicated light-background SVG (dark wordmark text) is not yet available — for light backgrounds use the transparent black-text PNGs below until a light SVG is produced from the vector source.
+
 ### Logo File Inventory
 
 All logo files are located in this repository at [`assets/logos/`](assets/logos/). The following table describes each file and its intended use.
@@ -83,7 +89,8 @@ All logo files are located in this repository at [`assets/logos/`](assets/logos/
 
 | File | Format | Size | Description |
 |------|--------|------|-------------|
-| `MoonSocietyLogo2014.svg` | SVG | 41 KB | Vector source file (2014 version). Can be used for generating new size variants. Verify that it matches the current wordmark before use. |
+| `MoonSocietyLogo2014.svg` | SVG | 41 KB | **Canonical wordmark (source of truth).** Vector file maintained upstream at strabo.moonsociety.org. White wordmark + lunar disc for dark backgrounds. Use wherever SVG is supported and to generate new raster sizes. No ™ glyph. |
+| `TMS_LOGO_Face_Only_S619_01.svg` | SVG | 19 KB | Lunar disc / face-only mark (no wordmark). For favicons, avatars, and small icon placements. |
 | `TMS_LOGO_06_2014_o710_0436_03.svg` | SVG | 42 KB | Original 2014 vector artwork with full metadata. Source file for reproduction. |
 | `MoonSoc_Logo_BLK_217x100.png` | PNG | 7 KB | Small black-text logo at 217×100px. Too small for most applications — use `MoonSocLogo-Trans-440x190.png` instead. |
 | `TMSlogo_blacktext_tranbg.gif` | GIF, transparent | 10 KB | Legacy GIF format. Do not use — replaced by the PNG transparent versions above. |
@@ -118,7 +125,7 @@ All logo files are located in this repository at [`assets/logos/`](assets/logos/
 - Rotate or skew the logo
 - Place the logo on backgrounds that reduce legibility
 - Crop or partially obscure the lunar disc
-- Remove the ™ symbol
+- Add a ™ symbol to the canonical SVG wordmark, or substitute the legacy ™-bearing raster files for it
 
 ---
 
@@ -182,25 +189,25 @@ These colors are available for specific applications such as data visualization,
 
 The Moon Society uses five typeface roles. Each serves a distinct purpose, and they should not be used interchangeably.
 
-### Display / Decorative Headlines — Syne
+### Display / Decorative Headlines — League Spartan
 
 **Use for:** Hero headlines, event titles, large promotional text, and display-size content where visual impact matters most.
 
-**Source:** [Google Fonts — Syne](https://fonts.google.com/specimen/Syne)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
-**Weights available:** 400 (Regular) through 800 (Extra Bold). Prefer 700 or 800 at display sizes.
+**Weights available:** 400 (Regular) through 900 (Black). Prefer 800 (Extra Bold) at display sizes.
 
-**Guidance:** Syne works best at 32px and above. It has strong personality at large sizes but loses clarity at body text sizes. Do not use Syne for body text or UI labels.
+**Guidance:** Display and headings now share **one family — League Spartan** — so the distinction is weight and size, not typeface. Set display headlines at 32px and above in weight 800 with tight tracking (−0.02em). This unifies the brand on a single geometric sans and replaces the former **Syne** display face (retired in the 2026 direction; see moonsociety.org). Do not reintroduce Syne or a second display typeface.
 
-### Headings — Spartan
+### Headings — League Spartan
 
 **Use for:** Section headings (H1 through H6), navigation labels, button text, and any structural heading that is not a display/hero headline.
 
-**Source:** [Google Fonts — Spartan](https://fonts.google.com/specimen/League+Spartan) (League Spartan is the single-weight FOSS implementation; Spartan MB provides seven weights)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
 **Weights:** Prefer 600 (Semibold) or 700 (Bold) for headings. 400 (Regular) may be used for navigation and smaller UI headings.
 
-**Guidance:** Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
+**Guidance:** League Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
 
 ### Body Text — Noto Sans
 
@@ -212,13 +219,13 @@ The Moon Society uses five typeface roles. Each serves a distinct purpose, and t
 
 **Guidance:** Set body text between 16px and 18px with a line height of 1.5 to 1.6. Noto Sans has a distinguishing capital "I" with serifs, which aids readability and accessibility.
 
-### Serif / Editorial — Palatino / Palladio
+### Serif / Editorial — Spectral
 
 **Use for:** Long-form editorial content, pull quotes, formal documents, and print publications where a serif typeface is appropriate.
 
-**Source:** System font stack (see Design Specification for full stack). TeX Gyre Pagella is the FOSS redistributable implementation.
+**Source:** [Google Fonts — Spectral](https://fonts.google.com/specimen/Spectral). Delivered via the Google Fonts CDN with a `Georgia, "Times New Roman", serif` fallback chain for first paint.
 
-**Guidance:** This typeface connects to the Moon Society's publishing heritage. Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for screens.
+**Guidance:** Spectral is a contemporary screen-first serif that gives editorial surfaces a publishing voice while staying legible on screen. It replaces the former **Palatino / TeX Gyre Pagella** system-serif stack as part of the 2026 move to CDN-delivered Google Fonts (no system or self-hosted faces). Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for general screen reading.
 
 ### Monospace — Inconsolata
 
@@ -307,9 +314,146 @@ When selecting or commissioning photography for events, outreach, or publication
 
 ---
 
+## Sub-Brand: Lunarpedia
+
+Lunarpedia (<https://lunarpedia.org>) is the Moon Society's open, collaborative
+encyclopedia of lunar settlement — a MediaWiki-based reference covering "everything
+we will need to know how to do on Luna to set up self-sustaining bases and colonies,
+as well as related efforts, designs, and business models that may eventually lead
+there." It is a sub-brand of the Moon Society and inherits this guide's voice and,
+where practical, its palette — but as a wiki it lives inside the conventions of its
+software. For Lunarpedia, the current state of the live site and the canonical
+MediaWiki design system are the same thing, which makes the brand target clear.
+
+> **Platform context.** The live site runs **MediaWiki 1.43.8** with the
+> **Vector 2022** skin active (`$wgDefaultSkin = 'vector-2022'`), including the Codex
+> client-preference day/night/auto color modes (`skin-theme-clientpref-*`). Vector 2022
+> *is* the canonical look — the reading-surface tokens below are simply its defaults.
+> (An older local copy still on MediaWiki 1.34/Metrolook exists only as a migration
+> backup; ignore it for brand purposes.)
+
+### Identity
+
+- **Name:** Lunarpedia (one word, capital L). Never "Lunar Pedia" or "LunarPedia."
+- **Tagline:** *"A resource for reaching our stepping stone to the Solar System."*
+- **Mission:** To document the engineering, science, and business of building
+  self-sustaining lunar bases and colonies.
+- **Relationship to parent:** A Moon Society project. Public pages should carry a
+  "Join the Moon Society" link and may use the parent wordmark in the footer, but
+  Lunarpedia keeps its own identity mark in the header.
+
+### Logo
+
+Lunarpedia has its own identity mark, distinct from the Moon Society wordmark.
+
+| File | Description | Use |
+|------|-------------|-----|
+| [`assets/lunarpedia/lunarpedia-mark.png`](assets/lunarpedia/lunarpedia-mark.png) | The primary mark: an **open book** beneath a **full-Moon globe**, with the lowercase wordmark "lunar**pedia**" ("lunar" light, "pedia" bold) below. Grayscale, transparent background. | Site header logo (`$wgLogo` / `$wgLogos`), favicons, avatars. The canonical brand mark. |
+| [`assets/lunarpedia/lunarpedia-banner.png`](assets/lunarpedia/lunarpedia-banner.png) | Decorative banner: the serif word "Lunarpedia™" set over a full-disc lunar photograph. | Editorial/title-card use only (e.g. social cards, print headers). **Not** the site logo. |
+
+**Logo guidance:**
+
+- The open-book-and-globe **mark is the canonical logo**. Prefer it wherever a single
+  Lunarpedia identifier is needed.
+- The mark reads as grayscale by design — the book/globe motif carries the meaning, not
+  color. Do not recolor it into the Moon Society gold/blue; if a one-color treatment is
+  needed, use a solid neutral (Near-Black `#1D252D` or white) rather than a brand hue.
+- The banner image carries a ™; the mark does not. Do not add a ™ to the mark.
+- For Vector 2022, supply the logo via `$wgLogos` with `icon`, `wordmark`, and a 1×/1.5×/2×
+  `srcset`. The wordmark slot can use the lowercase "lunarpedia" lockup.
+- Maintain clear space around the mark equal to the cap-height of the wordmark's "l."
+
+### Color System
+
+Lunarpedia's surface is a **wiki reading environment**, so it adopts the canonical
+**Vector 2022 / WikimediaUI (Codex)** content tokens for the reading experience, with the
+**Moon Society palette reserved for brand touchpoints** (footer, cross-links, campaign
+banners, the parent wordmark). This keeps articles legible and familiar to wiki readers
+while still signaling the Moon Society relationship.
+
+#### Vector 2022 reading-surface tokens (canonical)
+
+| Role | Hex | Codex / Vector token |
+|------|-----|----------------------|
+| Body text | `#202122` | `--color-base` |
+| Content background | `#FFFFFF` | `--background-color-base` |
+| Page container / chrome background | `#F8F9FA` | `--background-color-neutral-subtle` |
+| Link (blue) | `#3366CC` | `--color-progressive` / `color-link` |
+| Link — visited | `#795CB2` | `--color-visited` |
+| Link — new/red (missing page) | `#D73333` | `--color-destructive` (legacy red link `#BA0000`) |
+| Link — hover (progressive) | `#3056A9` | `--color-progressive--hover` |
+| Border — base | `#A2A9B1` | `--border-color-base` |
+| Border — subtle / dividers | `#C8CCD1` | `--border-color-subtle` |
+| Heading underline (h1/h2 rule) | `#A2A9B1` | `--border-color-base` |
+
+> The Vector 2022 link blue (`#3366CC`) is part of the Wikimedia Design Style Guide and
+> is intentionally **not** the Moon Society Cerulean (`#00A3E0`). Inside article body
+> text, keep wiki-standard link colors — readers rely on them. Reserve Cerulean for
+> brand chrome outside the article body.
+
+#### Moon Society accents on Lunarpedia (brand touchpoints)
+
+| Name | Hex | Where |
+|------|-----|-------|
+| Space Cadet Blue | `#13294B` | Footer band, parent-brand callouts, campaign banners |
+| Gold | `#FFCD00` | Calls to action ("Join the Moon Society"), highlight rules |
+| Near-Black | `#1D252D` | One-color logo treatment, deep UI surfaces |
+
+**Contrast note:** all Vector 2022 pairings above meet WCAG AA on white. Keep the parent
+guide's rules in force for brand accents — never set Gold (`#FFCD00`) as text on white, and
+do not use Cerulean (`#00A3E0`) for normal-size text on white.
+
+### Typography
+
+Lunarpedia follows the **Vector 2022 type system**, which differs deliberately from the
+parent guide (League Spartan is a display/heading face ill-suited to dense reference reading):
+
+- **Headings (h1 page title, h2 section rules) — serif.** Vector 2022 sets content
+  headings in a serif stack: `'Linux Libertine', 'Georgia', 'Times', serif`. This is the
+  recognizable "wiki" heading look; keep it. The free TeX Gyre / Linux Libertine family
+  satisfies the parent guide's preference for FOSS-redistributable fonts.
+- **Body & UI — system sans.** Article text and interface chrome use the Vector 2022
+  sans stack (`-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`).
+  Noto Sans is an acceptable, on-brand explicit substitute if a webfont is desired.
+- **Code / monospace — `monospace`.** Inconsolata may be loaded as the explicit
+  monospace face to align with the parent guide.
+- **Reading size:** keep Vector 2022 defaults (~0.875rem base, limited content line
+  length ≈ 960px). Do not widen body line length for prose — the limited-width reading
+  mode is a feature, not a bug.
+
+Do **not** force League Spartan into article body or headings; it belongs to
+Moon Society marketing surfaces, not the encyclopedia.
+
+### Application Guidance
+
+**Do:**
+
+- Treat **Vector 2022** (live now on MW 1.43.x) as the canonical skin; mirror its reading tokens above.
+- Keep article links wiki-standard blue/purple/red so readers can navigate by color.
+- Use the open-book-and-globe **mark** as the site logo.
+- Place Moon Society brand color and the parent wordmark in the **footer and
+  cross-promotional areas**, not inside article bodies.
+- Keep the voice authoritative-not-academic and inclusive-not-insider (see Brand Voice),
+  expanding acronyms for newcomers.
+
+**Don't:**
+
+- Don't restyle article body text in League Spartan or in brand gold/blue.
+- Don't replace wiki link colors with Cerulean inside content.
+- Don't recolor or add a ™ to the open-book mark.
+- Don't treat the old local Metrolook/MW 1.34 copy as the brand target — it is a backup.
+- Don't widen or override Vector 2022's limited content width for prose.
+
+---
+
 ## What This Guide Does Not Cover
 
-This guide addresses the parent Moon Society brand only. Sub-brands and affiliated properties (Lunar Development Conference, Moon Miners' Manifesto, Lunarpedia, Luna City Press, Mare Cognitum, and chapter/outpost identities) will be addressed in a future supplement. Until then, sub-brands should use the parent color palette and typography system as a baseline while maintaining their own identity marks.
+This guide addresses the parent Moon Society brand and the Lunarpedia sub-brand (above).
+Other sub-brands and affiliated properties (Lunar Development Conference, Moon Miners'
+Manifesto, Luna City Press, Mare Cognitum, and chapter/outpost identities) will be
+addressed in a future supplement. Until then, those sub-brands should use the parent
+color palette and typography system as a baseline while maintaining their own identity
+marks.
 
 ---
 

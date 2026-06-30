@@ -4,6 +4,8 @@
 > Full machine-readable manifest: https://branding.moonsociety.org/brand.json
 > Follows the llms.txt convention: https://llmstxt.org/
 >
+> GENERATED from brand.json by scripts/generate-derived.mjs — do not hand-edit.
+>
 > NOTE: This is an unofficial, community-maintained brand reference. The Moon
 > Society and the Moon Society logo are trademarks of The Moon Society, Incorporated.
 
@@ -18,95 +20,93 @@
 
 ## Mission
 
-The Moon Society is a membership-based space advocacy organization dedicated
-to furthering the development and settlement of the Moon. We bring together
-citizens, scientists, engineers, and enthusiasts who believe that a permanent
-human presence on the Moon is both achievable and essential.
+The Moon Society is a membership-based space advocacy organization dedicated to furthering the development and settlement of the Moon. We bring together citizens, scientists, engineers, and enthusiasts who believe that a permanent human presence on the Moon is both achievable and essential.
 
 ## Canonical Colors
 
 Use these exact hex values. Do not approximate or substitute.
 
 Primary:
-- Space Cadet Blue:  #13294B  — primary background, dominant brand color
-- Gold:              #FFCD00  — primary accent, CTAs, highlights
+- Space Cadet Blue:    #13294B  — Primary background, dominant brand color
+- Gold:                #FFCD00  — Primary accent, calls to action, highlights
 
 Secondary:
-- Cerulean:          #00A3E0  — links, interactive elements
-- Blue:              #006298  — mid-tone blue for depth
-- Cyan:              #6AD1E3  — light accent, data viz, tags
-- Emerald:           #009775  — success, positive indicators
+- Cerulean:            #00A3E0  — Links, interactive elements, secondary accent
+- Blue:                #006298  — Mid-tone blue for depth and layering
+- Cyan:                #6AD1E3  — Light accent, data visualization, tags
+- Emerald:             #009775  — Success states, positive indicators
 
 Neutrals:
-- White:             #FFFFFF
-- Near-Black:        #1D252D  — deep background (preferred over pure black)
+- White:               #FFFFFF  — Primary text on dark backgrounds
+- Near-Black:          #1D252D  — Deep background, slightly warmer than pure black
 
 CSS tokens (importable from /colors.css):
-  --ms-space-cadet, --ms-gold, --ms-cerulean, --ms-blue, --ms-cyan,
-  --ms-emerald, --ms-white, --ms-near-black
+  --ms-space-cadet, --ms-gold, --ms-cerulean, --ms-blue, --ms-cyan, --ms-emerald,
+  --ms-white, --ms-near-black
 
 NEGATIVE GUIDANCE (prevent confidently-wrong AI output):
-- Gold (#FFCD00) on White fails WCAG contrast (1.5:1). Never use gold text on white.
+- Cerulean (#00A3E0) on White fails WCAG contrast (2.9:1). Do not use as text on white.
+- Warning (#D29F13) on White fails WCAG contrast (2.4:1). Do not use as text on white.
+- Gold (#FFCD00) on White fails WCAG contrast (1.5:1). Do not use as text on white.
 - Do not place the primary white-text wordmark on light or busy backgrounds.
-- Prefer "Moon" over "lunar" as a modifier where either works.
+- Overuse 'lunar' as a modifier when 'Moon' works fine
 
 ## Typography
 
-- Display: Syne, weights 400–800 (prefer 700–800), 32px and above only
-- Headings: League Spartan, weights 400–900 (prefer 600–700), line-height 1.2
-- Body: Noto Sans, weights 400–700, line-height 1.5–1.6
-- Serif (editorial/print): Palatino / TeX Gyre Pagella, line-height 1.65
-- Monospace/code: Inconsolata, weights 400–700 (use sparingly)
+All five roles are delivered via Google Fonts (CDN) — no system or self-hosted faces.
+
+- Display: League Spartan, weights 400/500/600/700/800/900 (prefer 800), 32px and above; same family as headings
+- Headings: League Spartan, weights 400/500/600/700/800/900 (prefer 600–700), line-height 1.2
+- Body: Noto Sans, weights 400/600/700, line-height 1.5–1.6
+- Serif (editorial/print): Spectral, weights 400/500/600/700, line-height 1.65
+- Monospace/code: Inconsolata, weights 400/700 (use sparingly)
 - Source: Google Fonts (https://branding.moonsociety.org/fonts)
 
 ## Voice & Tone
 
-Voice: credible enthusiasm — a knowledgeable colleague who is genuinely excited
-and wants you to be part of it. Traits: Authoritative, Aspirational, Inclusive, Active.
+Voice: The Moon Society's voice conveys credible enthusiasm. Traits: Authoritative, Aspirational, Inclusive, Active.
 
 Do:
-- Be authoritative, not academic — precise language without unnecessary jargon
-- Be aspirational, not fantastical — real missions, technology, timelines
-- Be inclusive, not insider — welcome newcomers; explain acronyms
-- Be active, not passive — convey agency and momentum
+- Be authoritative, not academic — use precise language without unnecessary jargon
+- Be aspirational, not fantastical — advocate for real missions, technology, and timelines
+- Be inclusive, not insider — welcome people who discovered us yesterday
+- Be active, not passive — use language that reflects agency and momentum
+- Provide enough context that a motivated newcomer can follow technical terms
 
 Don't:
-- Overuse "lunar" when "Moon" works fine
-- Use sci-fi cliches ("boldly go", "final frontier", "to the stars")
-- Use breathless superlatives ("revolutionary", "game-changing")
-- Use insider shorthand (MMM, LDC, WSD) without explanation
+- Overuse 'lunar' as a modifier when 'Moon' works fine
+- Use sci-fi cliches ('boldly go', 'final frontier', 'to the stars')
+- Use breathless superlatives ('revolutionary', 'game-changing', 'unprecedented')
+- Use insider shorthand in public-facing text (MMM, LDC, WSD without explanation)
 
 ## Logo
 
-- Primary (white):  /assets/logos/MoonSoc_TransWhite_Print.png  — dark backgrounds
-- Primary (black):  /assets/logos/MoonSocLogo-Trans-440x190.png — light backgrounds
-- Icon:             /assets/logos/MoonSoc_Logo.png             — favicons, tight spaces
+- Canonical (SVG):  /assets/logos/MoonSocietyLogo2014.svg  — source of truth; white wordmark for dark backgrounds; no TM glyph
+- Face-only (SVG):  /assets/logos/TMS_LOGO_Face_Only_S619_01.svg  — disc/icon mark for favicons and avatars
+- Primary (white):  /assets/logos/MoonSoc_TransWhite_Print.png  — dark backgrounds (raster)
+- Primary (black):  /assets/logos/MoonSocLogo-Trans-440x190.png  — light backgrounds (raster)
+- Icon:             /assets/logos/MoonSoc_Logo.png  — favicons, tight spaces
 
 Logo bundle (ZIP): https://branding.moonsociety.org/logo
 
-Prohibitions: Do not alter proportions, recolor, add shadows/gradients, rotate,
-skew, crop the lunar disc, or remove the trademark symbol.
-Clear space: Equal to the height of the capital "T" in "THE" on all sides.
-Minimum size: 200px wide digital / 1.5in (38mm) print.
+Prohibitions:
+- Do not alter the proportions or spacing of the wordmark
+- Do not change the colors of any element within the logo
+- Do not add effects such as drop shadows, outlines, glows, or gradients
+- Do not rotate or skew the logo
+- Do not place the logo on backgrounds that reduce legibility
+- Do not crop or partially obscure the lunar disc
+- Use the canonical SVG wordmark, which does not render a visible trademark (TM) glyph; do not add a TM to it or substitute the legacy TM-bearing raster files
+
+Clear space: Minimum clear space equal to the height of the capital 'T' in 'THE' on all sides.
+Minimum size: 200px wide digital / 1.5in (38mm) wide print.
 
 ## Sub-brands
 
-- LDC 2026 (Lunar Development Conference): July 17–18, 2026, virtual. Theme:
-  surface and subsurface of the Moon. https://ldc.moonsociety.org
-  Inherits the parent palette and typography; keeps its own conference mark.
-
-## Stable Short URLs
-
-- /guide   — long-form brand guide (markdown)
-- /spec    — design specification (markdown)
-- /logo    — logo bundle (zip)
-- /colors  — CSS custom properties (--ms-*)
-- /tokens  — W3C design tokens
-- /fonts   — Google Fonts share URL
-- /json    — machine-readable manifest
-- /llms    — this file
-
-All resolve via https://branding.moonsociety.org.
+- Lunar Development Conference 2026: The premier virtual conference on permanent lunar settlement.
+  The Moon Society's annual conference series bringing together the global community working toward a permanent human presence on the Moon. LDC 2026 focuses on the surface and subsurface of the Moon, from geology and resource extraction to habitat design and human factors. https://ldc.moonsociety.org Uses the parent Moon Society color palette and typography system as its baseline while maintaining its own conference identity mark.
+- Lunarpedia — the lunar settlement wiki: A resource for reaching our stepping stone to the Solar System.
+  The Moon Society's open, collaborative MediaWiki encyclopedia documenting everything needed to set up self-sustaining lunar bases and colonies — engineering, science, designs, and business models. https://lunarpedia.org Inherits Moon Society voice and brand accents (Space Cadet Blue, Gold) for chrome only; the article reading surface follows canonical Vector 2022, and article link colors stay wiki-standard rather than brand Cerulean.
 
 ## Repository
 

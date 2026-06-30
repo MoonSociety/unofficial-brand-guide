@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/brand-v2.json",
-  "version": "2.0.0",
-  "generated": "2026-06-18",
+  "version": "2.1.0",
+  "generated": "2026-06-30",
   "organization": {
     "name": "The Moon Society",
     "tagline": "Building a spacefaring civilization on the Moon.",
@@ -138,7 +138,7 @@
         "name": "Warning",
         "token": "--ms-warning",
         "hex": "#D29F13",
-        "usage": "Warnings and caution indicators (Dark Gold)"
+        "usage": "Warnings and caution indicators (Dark Gold). FILL/ICON color only — at 2.4:1 on white it FAILS WCAG for text; never use as body text on light backgrounds. For warning text on light, pair with a dark foreground or use on a dark surface."
       },
       {
         "name": "Error",
@@ -183,18 +183,18 @@
     "fonts": [
       {
         "role": "display",
-        "family": "Syne",
-        "weights": [400, 600, 700, 800],
-        "fallbacks": ["sans-serif"],
-        "source": "https://fonts.google.com/specimen/Syne",
-        "usage": "Hero headlines, event titles, large promotional/display text (32px and above). Prefer 700–800.",
+        "family": "League Spartan",
+        "weights": [400, 500, 600, 700, 800, 900],
+        "fallbacks": ["Century Gothic", "Avenir Next", "Futura", "sans-serif"],
+        "source": "https://fonts.google.com/specimen/League+Spartan",
+        "usage": "Hero/display headlines, event titles, large promotional text (32px and above). Same family as headings — display vs. heading is a weight/size distinction, not a different typeface. Prefer 800. Replaces the former Syne display face (retired in the 2026 direction; see moonsociety.org).",
         "lineHeight": 1.2
       },
       {
         "role": "headings",
         "family": "League Spartan",
         "weights": [400, 500, 600, 700, 800, 900],
-        "fallbacks": ["Spartan", "Century Gothic", "Avenir Next", "Futura", "sans-serif"],
+        "fallbacks": ["Century Gothic", "Avenir Next", "Futura", "sans-serif"],
         "source": "https://fonts.google.com/specimen/League+Spartan",
         "usage": "Section headings (H1–H6), navigation labels, button text. Prefer 600–700.",
         "lineHeight": 1.2
@@ -210,11 +210,11 @@
       },
       {
         "role": "serif",
-        "family": "Palatino",
-        "weights": [400, 700],
-        "fallbacks": ["Palatino Linotype", "TeX Gyre Pagella", "Book Antiqua", "Garamond", "serif"],
-        "source": "https://www.ctan.org/pkg/tex-gyre-pagella",
-        "usage": "Long-form editorial content, pull quotes, formal documents, print publications.",
+        "family": "Spectral",
+        "weights": [400, 500, 600, 700],
+        "fallbacks": ["Georgia", "Times New Roman", "serif"],
+        "source": "https://fonts.google.com/specimen/Spectral",
+        "usage": "Long-form editorial content, pull quotes, formal documents, print publications. Loaded via Google Fonts CDN. Replaces the former Palatino / TeX Gyre Pagella system-serif stack as part of the 2026 move to CDN-delivered Google Fonts (no system or self-hosted faces).",
         "lineHeight": 1.65
       },
       {
@@ -231,6 +231,74 @@
       "base": "16px",
       "minimumBody": "14px",
       "maxLineWidth": "65ch"
+    }
+  },
+  "tokens": {
+    "$comment": "Design tokens beyond color and font family. Mirrors the live theme (moonsociety.org) :root. This is the single source — colors.css, tokens.json, and colors.json are GENERATED from this file by scripts/generate-derived.mjs. Do not hand-edit the derived files.",
+    "fontSize": {
+      "xs":   { "value": "clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem)",  "cssVar": "--text-xs" },
+      "sm":   { "value": "clamp(0.8125rem, 0.775rem + 0.25vw, 0.875rem)", "cssVar": "--text-sm" },
+      "base": { "value": "clamp(1rem, 0.95rem + 0.25vw, 1.125rem)",       "cssVar": "--text-base" },
+      "lg":   { "value": "clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem)",     "cssVar": "--text-lg" },
+      "xl":   { "value": "clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem)",       "cssVar": "--text-xl" },
+      "2xl":  { "value": "clamp(1.5rem, 1.2rem + 1.5vw, 2rem)",           "cssVar": "--text-2xl" },
+      "3xl":  { "value": "clamp(1.875rem, 1.4rem + 2.4vw, 2.5rem)",       "cssVar": "--text-3xl" },
+      "4xl":  { "value": "clamp(2.25rem, 1.5rem + 3.75vw, 3.5rem)",       "cssVar": "--text-4xl" },
+      "5xl":  { "value": "clamp(3rem, 2rem + 5vw, 5rem)",                 "cssVar": "--text-5xl" }
+    },
+    "fontWeight": {
+      "regular":   { "value": 400, "cssVar": "--weight-regular" },
+      "medium":    { "value": 500, "cssVar": "--weight-medium" },
+      "semibold":  { "value": 600, "cssVar": "--weight-semibold" },
+      "bold":      { "value": 700, "cssVar": "--weight-bold" },
+      "extrabold": { "value": 800, "cssVar": "--weight-extrabold" }
+    },
+    "lineHeight": {
+      "tight":   { "value": 1.2,  "cssVar": "--leading-tight" },
+      "normal":  { "value": 1.5,  "cssVar": "--leading-normal" },
+      "relaxed": { "value": 1.65, "cssVar": "--leading-relaxed" }
+    },
+    "letterSpacing": {
+      "tight":  { "value": "-0.02em", "cssVar": "--tracking-tight",  "usage": "Display and large headings" },
+      "normal": { "value": "0",       "cssVar": "--tracking-normal" },
+      "wide":   { "value": "0.04em",  "cssVar": "--tracking-wide",   "usage": "Uppercase nav, kickers, buttons" },
+      "wider":  { "value": "0.08em",  "cssVar": "--tracking-wider",  "usage": "Wide uppercase labels and section markers" }
+    },
+    "space": {
+      "1":  { "value": "0.25rem", "cssVar": "--space-1" },
+      "2":  { "value": "0.5rem",  "cssVar": "--space-2" },
+      "3":  { "value": "0.75rem", "cssVar": "--space-3" },
+      "4":  { "value": "1rem",    "cssVar": "--space-4" },
+      "5":  { "value": "1.5rem",  "cssVar": "--space-5" },
+      "6":  { "value": "2rem",    "cssVar": "--space-6" },
+      "7":  { "value": "3rem",    "cssVar": "--space-7" },
+      "8":  { "value": "4rem",    "cssVar": "--space-8" },
+      "9":  { "value": "6rem",    "cssVar": "--space-9" },
+      "10": { "value": "8rem",    "cssVar": "--space-10" }
+    },
+    "radius": {
+      "sm":   { "value": "4px",    "cssVar": "--radius-sm" },
+      "md":   { "value": "8px",    "cssVar": "--radius-md" },
+      "lg":   { "value": "12px",   "cssVar": "--radius-lg" },
+      "xl":   { "value": "16px",   "cssVar": "--radius-xl" },
+      "full": { "value": "9999px", "cssVar": "--radius-full" }
+    },
+    "shadow": {
+      "card":     { "value": "0 4px 24px rgba(0, 0, 0, 0.3)",  "cssVar": "--shadow-card",     "usage": "Default card / surface elevation on the dark brand background" },
+      "elevated": { "value": "0 8px 32px rgba(0, 0, 0, 0.4)",  "cssVar": "--shadow-elevated", "usage": "Raised surfaces, popovers, hover lift" },
+      "glow":     { "value": "0 0 16px rgba(255, 205, 0, 0.5)", "cssVar": "--shadow-glow",     "usage": "Gold focus/attention glow; decorative" }
+    },
+    "transition": {
+      "fast":   { "value": "150ms ease", "cssVar": "--transition-fast" },
+      "base":   { "value": "250ms ease", "cssVar": "--transition-base" },
+      "slow":   { "value": "400ms ease", "cssVar": "--transition-slow" },
+      "spring": { "value": "500ms cubic-bezier(0.34, 1.56, 0.64, 1)", "cssVar": "--transition-spring" }
+    },
+    "layout": {
+      "containerMax":    { "value": "1200px", "cssVar": "--container-max" },
+      "containerNarrow": { "value": "768px",  "cssVar": "--container-narrow" },
+      "containerWide":   { "value": "1440px", "cssVar": "--container-wide" },
+      "contentMaxWidth": { "value": "65ch",   "cssVar": "--content-max-width" }
     }
   },
   "logos": {
@@ -259,17 +327,26 @@
       "background": "dark",
       "description": "White text wordmark on solid black background. Use only where the background is exactly black (e.g. email templates). 440x190px."
     },
-    "vector-2014": {
+    "canonical-svg": {
       "file": "assets/logos/MoonSocietyLogo2014.svg",
       "format": "SVG",
+      "background": "dark",
+      "canonical": true,
+      "source": "https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg",
+      "description": "CANONICAL Moon Society wordmark. Vector source of truth — use this for the logo wherever SVG is supported, and to generate any new raster sizes. White wordmark with lunar disc, designed for dark backgrounds. Does NOT render a visible trademark (TM) glyph; the raster variants that include a TM are legacy and non-canonical."
+    },
+    "face-only": {
+      "file": "assets/logos/TMS_LOGO_Face_Only_S619_01.svg",
+      "format": "SVG",
       "background": "any",
-      "description": "Vector source file (2014 version) for generating new size variants. Verify it matches the current wordmark before use."
+      "source": "https://strabo.moonsociety.org/images/moonsoc-logo/TMS_LOGO_Face_Only_S619_01.svg",
+      "description": "Lunar disc / face-only mark (no wordmark). Use for favicons, avatars, and small icon placements."
     },
     "vector-source": {
       "file": "assets/logos/TMS_LOGO_06_2014_o710_0436_03.svg",
       "format": "SVG",
       "background": "any",
-      "description": "Original 2014 vector artwork with full metadata. Source file for reproduction."
+      "description": "Original 2014 vector artwork with full metadata. Historical source for reproduction; prefer canonical-svg for current use."
     },
     "rules": {
       "clearSpace": "Minimum clear space equal to the height of the capital 'T' in 'THE' on all sides.",
@@ -281,7 +358,7 @@
         "Do not rotate or skew the logo",
         "Do not place the logo on backgrounds that reduce legibility",
         "Do not crop or partially obscure the lunar disc",
-        "Do not remove the trademark symbol"
+        "Use the canonical SVG wordmark, which does not render a visible trademark (TM) glyph; do not add a TM to it or substitute the legacy TM-bearing raster files"
       ]
     }
   },
@@ -319,6 +396,34 @@
       "website": "https://ldc.moonsociety.org",
       "logo": "assets/ldc/ldc-2026-logo.svg",
       "inherits": "Uses the parent Moon Society color palette and typography system as its baseline while maintaining its own conference identity mark."
+    },
+    "lunarpedia": {
+      "name": "Lunarpedia",
+      "fullName": "Lunarpedia — the lunar settlement wiki",
+      "tagline": "A resource for reaching our stepping stone to the Solar System.",
+      "description": "The Moon Society's open, collaborative MediaWiki encyclopedia documenting everything needed to set up self-sustaining lunar bases and colonies — engineering, science, designs, and business models.",
+      "website": "https://lunarpedia.org",
+      "platform": "MediaWiki 1.43.x LTS (live); canonical skin: Vector 2022 (vector-2022) with Codex day/night/auto color modes",
+      "logo": "assets/lunarpedia/lunarpedia-mark.png",
+      "logoBanner": "assets/lunarpedia/lunarpedia-banner.png",
+      "readingSurface": {
+        "note": "Adopts canonical Vector 2022 / WikimediaUI (Codex) tokens for the reading experience; Moon Society palette is reserved for brand chrome (footer, cross-links, campaigns).",
+        "text": "#202122",
+        "backgroundBase": "#FFFFFF",
+        "backgroundContainer": "#F8F9FA",
+        "link": "#3366CC",
+        "linkVisited": "#795CB2",
+        "linkNew": "#D73333",
+        "linkHover": "#3056A9",
+        "borderBase": "#A2A9B1",
+        "borderSubtle": "#C8CCD1"
+      },
+      "typography": {
+        "headings": "'Linux Libertine', 'Georgia', 'Times', serif (Vector 2022 serif headings)",
+        "body": "system sans stack (-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif); Noto Sans acceptable substitute",
+        "monospace": "monospace; Inconsolata acceptable substitute"
+      },
+      "inherits": "Inherits Moon Society voice and brand accents (Space Cadet Blue, Gold) for chrome only; the article reading surface follows canonical Vector 2022, and article link colors stay wiki-standard rather than brand Cerulean."
     }
   },
   "resources": {
@@ -332,6 +437,14 @@
     "logoBundle": "https://branding.moonsociety.org/logo",
     "fonts": "https://branding.moonsociety.org/fonts",
     "site": "https://branding.moonsociety.org",
-    "repo": "https://github.com/MoonSociety/unofficial-brand-guide"
+    "repo": "https://github.com/MoonSociety/unofficial-brand-guide",
+    "versioned": {
+      "note": "Immutable, version-pinned snapshots. The unversioned URLs above always track the latest brand release; pin these /v2/ paths so a downstream pipeline does not break on the next brand update. The major version matches the brand.json major (currently 2).",
+      "brandJson": "https://branding.moonsociety.org/v2/brand.json",
+      "tokensJson": "https://branding.moonsociety.org/v2/tokens.json",
+      "colorsCss": "https://branding.moonsociety.org/v2/colors.css",
+      "colorsJson": "https://branding.moonsociety.org/v2/colors.json",
+      "llmsTxt": "https://branding.moonsociety.org/v2/llms.txt"
+    }
   }
 }

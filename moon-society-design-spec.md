@@ -98,10 +98,10 @@ Include these at the `:root` level of your stylesheet. The system is dark-mode-f
   /* ========================================
      TYPOGRAPHY
      ======================================== */
-  --font-display: 'Syne', sans-serif;
-  --font-heading: 'Spartan', 'League Spartan', 'Century Gothic', 'Avenir Next', 'Futura', sans-serif;
+  --font-display: 'League Spartan', 'Century Gothic', 'Avenir Next', 'Futura', sans-serif;
+  --font-heading: 'League Spartan', 'Century Gothic', 'Avenir Next', 'Futura', sans-serif;
   --font-body: 'Noto Sans', 'Verdana', 'DejaVu Sans', sans-serif;
-  --font-serif: 'Palatino', 'Palatino Linotype', 'TeX Gyre Pagella', 'Book Antiqua', 'Garamond', serif;
+  --font-serif: 'Spectral', 'Georgia', 'Times New Roman', serif;
   --font-mono: 'Inconsolata', 'Consolas', 'Menlo', 'Monaco', monospace;
 
   /* Font Sizes — fluid scale */
@@ -219,29 +219,26 @@ Light mode is the secondary mode. Apply this class to `<html>` or `<body>` when 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
 ```
 
-Note: League Spartan is available on Google Fonts as "League Spartan." For the full Spartan MB weight range, self-host the webfont files.
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-```
+All five roles are delivered from the Google Fonts CDN (no system or self-hosted faces). League Spartan covers **both** display and headings — there is no separate display webfont. Spectral is the editorial serif (replacing the former Palatino system stack).
 
 ### Full Font Stacks (for maximum fallback coverage)
 
 These stacks are designed to degrade gracefully across operating systems and devices. Use them in production CSS.
 
 ```css
-/* Display — Syne */
+/* Display — League Spartan (same family as headings; distinguished by weight/size) */
 .font-display {
-  font-family: 'Syne', sans-serif;
+  font-family: 'League Spartan', 'Century Gothic', 'CenturyGothic',
+    'Avenir Next', 'AvenirNext', 'Futura', 'Futura PT',
+    'URW Gothic L', 'Avant Garde', sans-serif;
 }
 
-/* Headings — Spartan with geometric fallback chain */
+/* Headings — League Spartan with geometric fallback chain */
 .font-heading {
-  font-family: 'Webfont-Spartan', 'Spartan', 'Spartan MB',
-    'League Spartan', 'Century Gothic', 'CenturyGothic',
+  font-family: 'League Spartan', 'Century Gothic', 'CenturyGothic',
     'Avenir', 'Avenir Next', 'AvenirNext',
     'Tw Cen MT', 'Futura', 'Futura PT',
     'URW Gothic L', 'Avant Garde', 'AvantGarde',
@@ -256,13 +253,10 @@ These stacks are designed to degrade gracefully across operating systems and dev
     'Carlito', sans-serif;
 }
 
-/* Serif — Palatino/Palladio with serif fallback chain */
+/* Serif — Spectral (Google Fonts CDN) with web-safe serif fallback for first paint */
 .font-serif {
-  font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD',
-    'Palladio', 'URW Palladio L', 'Palatino Novo',
-    'TeX Gyre Pagella', 'Palazzo Original', 'Marathon Serial',
-    'Book Antiqua', 'FPL Neu', 'Perpetua', 'Tinos',
-    'Linux Libertine', 'Libertine', 'Garamond', serif;
+  font-family: 'Spectral', 'Georgia', 'Times New Roman', 'Times',
+    'Tinos', 'Liberation Serif', serif;
 }
 
 /* Monospace — Inconsolata */
@@ -361,7 +355,7 @@ When self-hosting Inconsolata:
 ## Typography Scale Application
 
 ```css
-/* Display headlines — Syne */
+/* Display headlines — League Spartan (var(--font-display)) */
 .display-1 {
   font-family: var(--font-display);
   font-size: var(--text-5xl);
@@ -467,7 +461,7 @@ These are semantic descriptions of common UI components. Implementations should 
 - Full viewport width, minimum 70vh height
 - Background: `var(--bg-primary)` (Space Cadet Blue) or a darkened lunar photograph
 - If using a photograph, overlay with `rgba(19, 41, 75, 0.75)` to maintain text contrast
-- Headline: `.display-1` or `.display-2` using Syne
+- Headline: `.display-1` or `.display-2` using League Spartan (weight 800)
 - Subheadline: `var(--text-xl)` in Noto Sans, `var(--text-secondary)` color
 - Primary CTA: Gold background, Space Cadet Blue text
 - Secondary CTA: transparent with Gold border and Gold text

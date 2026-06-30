@@ -189,25 +189,25 @@ These colors are available for specific applications such as data visualization,
 
 The Moon Society uses five typeface roles. Each serves a distinct purpose, and they should not be used interchangeably.
 
-### Display / Decorative Headlines — Syne
+### Display / Decorative Headlines — League Spartan
 
 **Use for:** Hero headlines, event titles, large promotional text, and display-size content where visual impact matters most.
 
-**Source:** [Google Fonts — Syne](https://fonts.google.com/specimen/Syne)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
-**Weights available:** 400 (Regular) through 800 (Extra Bold). Prefer 700 or 800 at display sizes.
+**Weights available:** 400 (Regular) through 900 (Black). Prefer 800 (Extra Bold) at display sizes.
 
-**Guidance:** Syne works best at 32px and above. It has strong personality at large sizes but loses clarity at body text sizes. Do not use Syne for body text or UI labels.
+**Guidance:** Display and headings now share **one family — League Spartan** — so the distinction is weight and size, not typeface. Set display headlines at 32px and above in weight 800 with tight tracking (−0.02em). This unifies the brand on a single geometric sans and replaces the former **Syne** display face (retired in the 2026 direction; see moonsociety.org). Do not reintroduce Syne or a second display typeface.
 
-### Headings — Spartan
+### Headings — League Spartan
 
 **Use for:** Section headings (H1 through H6), navigation labels, button text, and any structural heading that is not a display/hero headline.
 
-**Source:** [Google Fonts — Spartan](https://fonts.google.com/specimen/League+Spartan) (League Spartan is the single-weight FOSS implementation; Spartan MB provides seven weights)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
 **Weights:** Prefer 600 (Semibold) or 700 (Bold) for headings. 400 (Regular) may be used for navigation and smaller UI headings.
 
-**Guidance:** Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
+**Guidance:** League Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
 
 ### Body Text — Noto Sans
 
@@ -219,13 +219,13 @@ The Moon Society uses five typeface roles. Each serves a distinct purpose, and t
 
 **Guidance:** Set body text between 16px and 18px with a line height of 1.5 to 1.6. Noto Sans has a distinguishing capital "I" with serifs, which aids readability and accessibility.
 
-### Serif / Editorial — Palatino / Palladio
+### Serif / Editorial — Spectral
 
 **Use for:** Long-form editorial content, pull quotes, formal documents, and print publications where a serif typeface is appropriate.
 
-**Source:** System font stack (see Design Specification for full stack). TeX Gyre Pagella is the FOSS redistributable implementation.
+**Source:** [Google Fonts — Spectral](https://fonts.google.com/specimen/Spectral). Delivered via the Google Fonts CDN with a `Georgia, "Times New Roman", serif` fallback chain for first paint.
 
-**Guidance:** This typeface connects to the Moon Society's publishing heritage. Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for screens.
+**Guidance:** Spectral is a contemporary screen-first serif that gives editorial surfaces a publishing voice while staying legible on screen. It replaces the former **Palatino / TeX Gyre Pagella** system-serif stack as part of the 2026 move to CDN-delivered Google Fonts (no system or self-hosted faces). Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for general screen reading.
 
 ### Monospace — Inconsolata
 
@@ -406,7 +406,7 @@ do not use Cerulean (`#00A3E0`) for normal-size text on white.
 ### Typography
 
 Lunarpedia follows the **Vector 2022 type system**, which differs deliberately from the
-parent guide (Syne/Spartan are display faces ill-suited to dense reference reading):
+parent guide (League Spartan is a display/heading face ill-suited to dense reference reading):
 
 - **Headings (h1 page title, h2 section rules) — serif.** Vector 2022 sets content
   headings in a serif stack: `'Linux Libertine', 'Georgia', 'Times', serif`. This is the
@@ -421,7 +421,7 @@ parent guide (Syne/Spartan are display faces ill-suited to dense reference readi
   length ≈ 960px). Do not widen body line length for prose — the limited-width reading
   mode is a feature, not a bug.
 
-Do **not** force Syne or League Spartan into article body or headings; they belong to
+Do **not** force League Spartan into article body or headings; it belongs to
 Moon Society marketing surfaces, not the encyclopedia.
 
 ### Application Guidance
@@ -438,7 +438,7 @@ Moon Society marketing surfaces, not the encyclopedia.
 
 **Don't:**
 
-- Don't restyle article body text in Syne/Spartan or in brand gold/blue.
+- Don't restyle article body text in League Spartan or in brand gold/blue.
 - Don't replace wiki link colors with Cerulean inside content.
 - Don't recolor or add a ™ to the open-book mark.
 - Don't treat the old local Metrolook/MW 1.34 copy as the brand target — it is a backup.

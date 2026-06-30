@@ -162,6 +162,16 @@ async function main() {
     if (await exists(src)) results.push(await syncIfChanged(src, resolve(PUBLIC, f), f));
   }
 
+  // Immutable version-pinned snapshots: site/public/v{major}/<brand files>.
+  // Lets downstream consumers pin e.g. /v2/brand.json and not break on the
+  // next brand update (the unversioned paths always track latest).
+  const brand = JSON.parse(await readFile(resolve(ROOT, "brand.json"), "utf8"));
+  const major = `v${brand.version.split(".")[0]}`;
+  for (const f of BRAND_FILES) {
+    const src = resolve(ROOT, f);
+    if (await exists(src)) results.push(await syncIfChanged(src, resolve(PUBLIC, major, f), `${major}/${f}`));
+  }
+
   results.push(await buildLogoBundle());
 
   const acted = results.filter((r) => r.action !== "skip").length;

@@ -57,8 +57,8 @@
 
   --font-sans: var(--font-noto-sans), "Noto Sans", Verdana, sans-serif;
   --font-heading: var(--font-league-spartan), "League Spartan", "Century Gothic", sans-serif;
-  --font-display: var(--font-syne), "Syne", sans-serif;
-  --font-serif: "Palatino", "Palatino Linotype", "TeX Gyre Pagella", "Book Antiqua", serif;
+  --font-display: var(--font-league-spartan), "League Spartan", "Century Gothic", sans-serif;
+  --font-serif: var(--font-spectral), "Spectral", Georgia, "Times New Roman", serif;
   --font-mono: var(--font-inconsolata), "Inconsolata", Consolas, monospace;
   --radius: .625rem;
 

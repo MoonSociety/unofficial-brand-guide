@@ -5,44 +5,45 @@
  * Usage:  @import url("https://branding.moonsociety.org/colors.css");
  * Or copy these custom properties into your own stylesheet.
  *
+ * GENERATED from brand.json by scripts/generate-derived.mjs — do not hand-edit.
  * Canonical: brand.json (https://branding.moonsociety.org/brand.json)
  */
 
 :root {
   /* Primary Colors */
-  --ms-space-cadet: #13294B; /* Space Cadet Blue — primary background, dominant brand color */
-  --ms-gold:        #FFCD00; /* Gold            — primary accent, calls to action, highlights */
+  --ms-space-cadet:     #13294B; /* Space Cadet Blue — Primary background, dominant brand color */
+  --ms-gold:            #FFCD00; /* Gold — Primary accent, calls to action, highlights */
 
   /* Secondary Colors */
-  --ms-cerulean:    #00A3E0; /* Cerulean        — links, interactive elements */
-  --ms-blue:        #006298; /* Blue            — mid-tone blue for depth and layering */
-  --ms-cyan:        #6AD1E3; /* Cyan            — light accent, data viz, tags */
-  --ms-emerald:     #009775; /* Emerald         — success states, positive indicators */
+  --ms-cerulean:        #00A3E0; /* Cerulean — Links, interactive elements, secondary accent */
+  --ms-blue:            #006298; /* Blue — Mid-tone blue for depth and layering */
+  --ms-cyan:            #6AD1E3; /* Cyan — Light accent, data visualization, tags */
+  --ms-emerald:         #009775; /* Emerald — Success states, positive indicators */
 
   /* Neutral Colors */
-  --ms-white:       #FFFFFF; /* White           — primary text on dark backgrounds */
-  --ms-gray-100:    #D0D0CE; /* Cool Gray 2     — subtle borders, dividers on dark */
-  --ms-gray-200:    #B1B3B3; /* Cool Gray 5     — secondary text on dark */
-  --ms-gray-300:    #888B8D; /* Cool Gray 8     — muted text, placeholders */
-  --ms-gray-400:    #53565A; /* Cool Gray 11    — borders, dividers on light */
-  --ms-near-black:  #1D252D; /* Near-Black      — deep background */
-  --ms-black:       #000000; /* Black           — use sparingly */
+  --ms-white:           #FFFFFF; /* White — Primary text on dark backgrounds */
+  --ms-gray-100:        #D0D0CE; /* Cool Gray 2 — Subtle borders, dividers on dark mode */
+  --ms-gray-200:        #B1B3B3; /* Cool Gray 5 — Secondary text on dark backgrounds */
+  --ms-gray-300:        #888B8D; /* Cool Gray 8 — Muted text, placeholder text */
+  --ms-gray-400:        #53565A; /* Cool Gray 11 — Borders and dividers on light backgrounds */
+  --ms-near-black:      #1D252D; /* Near-Black — Deep background, slightly warmer than pure black */
+  --ms-black:           #000000; /* Black — Use sparingly; prefer Near-Black for large areas */
 
   /* Semantic Colors */
-  --ms-success:     #009775; /* Emerald */
-  --ms-warning:     #D29F13; /* Dark Gold */
-  --ms-error:       #E84855;
+  --ms-success:         #009775; /* Success — Success states and positive indicators (Emerald) */
+  --ms-warning:         #D29F13; /* Warning — Warnings and caution indicators (Dark Gold). FILL/ICON color only — at 2.4:1 on white it FAILS WCAG for text; never use as body text on light backgrounds. For warning text on light, pair with a dark foreground or use on a dark surface. */
+  --ms-error:           #E84855; /* Error — Errors and destructive actions */
 
   /* Extended Palette */
-  --ms-gold-light:   #FAE053;
-  --ms-gold-dark:    #D29F13;
-  --ms-gold-brown:   #967126;
-  --ms-warm-gray-1:  #D7D2CB;
-  --ms-warm-gray-7:  #968C83;
-  --ms-gray-brown:   #5E514D;
-  --ms-brown:        #382F2D;
-  --ms-off-white-pink: #E5E1E6;
-  --ms-mauve:        #C1B2B6;
-  --ms-lavender:     #7B6469;
-  --ms-dark-cherry:  #453536;
+  --ms-gold-light:      #FAE053; /* Light Gold — Lighter gold variant for gradients or hover states */
+  --ms-gold-dark:       #D29F13; /* Dark Gold — Darker gold variant for text on light backgrounds */
+  --ms-gold-brown:      #967126; /* Brownish Gold — Warm accent for editorial or print applications */
+  --ms-warm-gray-1:     #D7D2CB; /* Warm Gray 1 — Warm neutral background alternative */
+  --ms-warm-gray-7:     #968C83; /* Warm Gray 7 — Warm neutral mid-tone */
+  --ms-gray-brown:      #5E514D; /* Grayish Brown — Warm neutral for text or accents */
+  --ms-brown:           #382F2D; /* Brown — Deep warm neutral */
+  --ms-off-white-pink:  #E5E1E6; /* Pinkish Off-White — Soft warm background for special sections */
+  --ms-mauve:           #C1B2B6; /* Chaise Mauve — Warm accent */
+  --ms-lavender:        #7B6469; /* Lavender — Warm mid-tone accent */
+  --ms-dark-cherry:     #453536; /* Dark Cherry — Deep warm accent */
 }
