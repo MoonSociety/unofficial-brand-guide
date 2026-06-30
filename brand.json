@@ -328,6 +328,34 @@
       "website": "https://ldc.moonsociety.org",
       "logo": "assets/ldc/ldc-2026-logo.svg",
       "inherits": "Uses the parent Moon Society color palette and typography system as its baseline while maintaining its own conference identity mark."
+    },
+    "lunarpedia": {
+      "name": "Lunarpedia",
+      "fullName": "Lunarpedia — the lunar settlement wiki",
+      "tagline": "A resource for reaching our stepping stone to the Solar System.",
+      "description": "The Moon Society's open, collaborative MediaWiki encyclopedia documenting everything needed to set up self-sustaining lunar bases and colonies — engineering, science, designs, and business models.",
+      "website": "https://lunarpedia.org",
+      "platform": "MediaWiki 1.43.x LTS (live); canonical skin: Vector 2022 (vector-2022) with Codex day/night/auto color modes",
+      "logo": "assets/lunarpedia/lunarpedia-mark.png",
+      "logoBanner": "assets/lunarpedia/lunarpedia-banner.png",
+      "readingSurface": {
+        "note": "Adopts canonical Vector 2022 / WikimediaUI (Codex) tokens for the reading experience; Moon Society palette is reserved for brand chrome (footer, cross-links, campaigns).",
+        "text": "#202122",
+        "backgroundBase": "#FFFFFF",
+        "backgroundContainer": "#F8F9FA",
+        "link": "#3366CC",
+        "linkVisited": "#795CB2",
+        "linkNew": "#D73333",
+        "linkHover": "#3056A9",
+        "borderBase": "#A2A9B1",
+        "borderSubtle": "#C8CCD1"
+      },
+      "typography": {
+        "headings": "'Linux Libertine', 'Georgia', 'Times', serif (Vector 2022 serif headings)",
+        "body": "system sans stack (-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif); Noto Sans acceptable substitute",
+        "monospace": "monospace; Inconsolata acceptable substitute"
+      },
+      "inherits": "Inherits Moon Society voice and brand accents (Space Cadet Blue, Gold) for chrome only; the article reading surface follows canonical Vector 2022, and article link colors stay wiki-standard rather than brand Cerulean."
     }
   },
   "resources": {

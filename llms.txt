@@ -96,6 +96,14 @@ Minimum size: 200px wide digital / 1.5in (38mm) print.
 - LDC 2026 (Lunar Development Conference): July 17–18, 2026, virtual. Theme:
   surface and subsurface of the Moon. https://ldc.moonsociety.org
   Inherits the parent palette and typography; keeps its own conference mark.
+- Lunarpedia: the Moon Society's MediaWiki encyclopedia of lunar settlement.
+  https://lunarpedia.org  Tagline: "A resource for reaching our stepping stone
+  to the Solar System." Platform: MediaWiki 1.43.x LTS (live); canonical skin
+  Vector 2022. Reading surface uses canonical Vector 2022 / Codex tokens (text
+  #202122, link #3366CC, bg #FFFFFF / chrome #F8F9FA, border #A2A9B1); headings
+  serif (Linux Libertine/Georgia), body system sans. Moon Society palette and
+  wordmark are reserved for chrome (footer, cross-links), not article bodies.
+  Keep wiki-standard link colors in content. Logo: open-book-and-globe mark.
 
 ## Stable Short URLs
 
