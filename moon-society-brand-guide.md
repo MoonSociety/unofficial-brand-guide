@@ -60,6 +60,8 @@ The Moon Society logo is a horizontal wordmark featuring the text "THE MOON SOCI
 
 The **canonical Moon Society wordmark** is the vector file [`assets/logos/MoonSocietyLogo2014.svg`](assets/logos/MoonSocietyLogo2014.svg), maintained upstream at `https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg`. Use this SVG anywhere SVG is supported, and as the master for generating any new raster sizes. The companion disc/face-only mark is [`assets/logos/TMS_LOGO_Face_Only_S619_01.svg`](assets/logos/TMS_LOGO_Face_Only_S619_01.svg) (favicons, avatars, small icons).
 
+The **canonical raster logo** is [`assets/logos/MoonSocietyLogo2026_larger.png`](assets/logos/MoonSocietyLogo2026_larger.png) (2026 re-upload, 1580×646, transparent background), maintained upstream at `https://www.moonsociety.org/wp-content/uploads/2026/07/MoonSocietyLogo2026_larger.png`. This exact asset is the site-wide header/footer lockup on www.moonsociety.org (as of 2026-07-06) — use it for any raster placement in preference to the legacy PNG/JPG exports in the inventory below.
+
 > **Important:** The canonical SVG does **not** render a visible trademark (™) glyph. Several legacy raster files in the inventory below *do* include a ™ — those are **non-canonical**. Prefer the canonical SVG; do not add a ™ to it. A dedicated light-background SVG (dark wordmark text) is not yet available — for light backgrounds use the transparent black-text PNGs below until a light SVG is produced from the vector source.
 
 ### Logo File Inventory

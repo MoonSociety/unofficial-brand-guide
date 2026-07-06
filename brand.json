@@ -327,6 +327,14 @@
       "background": "dark",
       "description": "White text wordmark on solid black background. Use only where the background is exactly black (e.g. email templates). 440x190px."
     },
+    "canonical-raster": {
+      "file": "assets/logos/MoonSocietyLogo2026_larger.png",
+      "format": "PNG",
+      "background": "dark",
+      "canonical": true,
+      "source": "https://www.moonsociety.org/wp-content/uploads/2026/07/MoonSocietyLogo2026_larger.png",
+      "description": "CANONICAL raster logo (2026 re-upload, 1580×646 PNG, transparent background). This exact asset is the site-wide header/footer lockup on www.moonsociety.org as of 2026-07-06 — use it for any raster placement instead of the legacy PNG/JPG exports below. For vector contexts use canonical-svg."
+    },
     "canonical-svg": {
       "file": "assets/logos/MoonSocietyLogo2014.svg",
       "format": "SVG",
