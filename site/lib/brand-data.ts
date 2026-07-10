@@ -136,6 +136,9 @@ const logoEntries = Object.entries(brand.logos).filter(([k]) => k !== "rules") a
 
 const logoDisplayName = (id: string) =>
   ({
+    "canonical-raster": "Canonical Raster (2026)",
+    "canonical-svg": "Canonical Wordmark (SVG)",
+    "face-only": "Face-Only Mark",
     "primary-white": "Primary (White, on dark)",
     "primary-black": "Primary (Black, on light)",
     "primary-black-print": "Primary Black (Print)",
@@ -212,6 +215,16 @@ export const contrastRatios = brand.colors.accessibility.map((a) => ({
 export const ldc = {
   ...brand.subBrands.ldc,
   logoUrl: "/" + brand.subBrands.ldc.logo,
+};
+
+// ─────────────────────────────────────────────────────────────────────
+// Moon Miners' Manifesto sub-brand projection
+// ─────────────────────────────────────────────────────────────────────
+
+export const mmm = {
+  ...brand.subBrands.mmm,
+  logoUrl: "/" + brand.subBrands.mmm.logo,
+  logoBannerUrl: "/" + brand.subBrands.mmm.logoBanner,
 };
 
 // ─────────────────────────────────────────────────────────────────────

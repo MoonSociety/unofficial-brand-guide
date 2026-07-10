@@ -432,6 +432,36 @@
         "monospace": "monospace; Inconsolata acceptable substitute"
       },
       "inherits": "Inherits Moon Society voice and brand accents (Space Cadet Blue, Gold) for chrome only; the article reading surface follows canonical Vector 2022, and article link colors stay wiki-standard rather than brand Cerulean."
+    },
+    "mmm": {
+      "name": "Moon Miners' Manifesto",
+      "fullName": "Moon Miners' Manifesto (MMM)",
+      "tagline": "The Moon Society's lunar settlement journal — publishing since 1986.",
+      "description": "Founded and long edited by Peter Kokh, Moon Miners' Manifesto is the Society's flagship publication: four decades of essays and designs on lunar habitats, ISRU, settlement planning, and space development. The full archive (1986–present) is published online at moonmanifesto.com, organized by category (Announcements, Designs, Discussion, Habitats, History, In Focus, News, Planning, Reports) with cross-links to The Moon Society, Lunarpedia, and Luna City Press. Copyright 1986–present by Moon Society Incorporated and other parties; 'Moon Miners' Manifesto' is a Moon Society trademark.",
+      "website": "https://www.moonmanifesto.com",
+      "platform": "WordPress; custom theme 'Corolis' (WP theme header currently reads 'Crocco for MMM' v0.4, by James Gholston, public domain / CC0). CSS Grid layout with deliberate inline-block and float fallbacks — designed to be 'highly shatter-resistant' on legacy browsers. moonmanifesto.org 301-redirects to moonmanifesto.com.",
+      "logo": "assets/mmm/MoonLogo_MMM_3811_01_1080px.png",
+      "logoBanner": "assets/mmm/MMM_Scape_0914_02_400px.png",
+      "readingSurface": {
+        "note": "Light editorial reading surface built from the parent palette plus MMM's own warm 'regolith' neutrals. Masthead art and category badges carry the visual identity; body pages stay newspaper-plain.",
+        "text": "#000000",
+        "inkWarm": "#453536",
+        "backgroundBase": "#FFFFFF",
+        "backgroundContainer": "#E5E1E6",
+        "link": "#006298",
+        "accentGold": "#FFCD00",
+        "accentCyan": "#6AD1E3",
+        "borderWarm": "#C1B2B6",
+        "shadowWarm": "#968C83",
+        "highlight": "#FAE053"
+      },
+      "typography": {
+        "headings": "Spartan MB (self-hosted webfont; the League Spartan precursor) — visually continuous with the parent brand's League Spartan",
+        "body": "Noto Sans (matches parent brand body face)",
+        "serif": "Palatino stack for editorial passages (legacy: the parent brand has since moved its serif to Spectral; MMM retains Palatino for archival continuity)",
+        "monospace": "Inconsolata (matches parent brand)"
+      },
+      "inherits": "Uses the full Moon Society core palette (Space Cadet Blue, Gold, Blue, Cerulean, Cyan) and the Spartan/Noto Sans/Inconsolata type system on a light reading surface, extended with MMM-specific warm regolith neutrals (#453536, #C1B2B6, #968C83) and its own masthead art. The archive predates the 2026 brand system; treat its palette additions as sub-brand-local, not parent tokens."
     }
   },
   "resources": {

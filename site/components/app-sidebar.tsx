@@ -9,6 +9,7 @@ import {
   Type,
   MessageSquare,
   Rocket,
+  Newspaper,
   Download,
   FileJson,
   ExternalLink,
@@ -36,6 +37,7 @@ const navItems = [
   { title: "Typography", url: "/typography", icon: Type },
   { title: "Voice & Tone", url: "/voice", icon: MessageSquare },
   { title: "LDC", url: "/ldc", icon: Rocket },
+  { title: "MMM", url: "/mmm", icon: Newspaper },
   { title: "Downloads", url: "/downloads", icon: Download },
 ];
 

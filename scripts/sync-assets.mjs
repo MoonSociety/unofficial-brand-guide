@@ -29,14 +29,19 @@ const PUBLIC = resolve(SITE, "public");
 
 const ROOT_LOGOS = resolve(ROOT, "assets/logos");
 const ROOT_LDC = resolve(ROOT, "assets/ldc");
+const ROOT_LUNARPEDIA = resolve(ROOT, "assets/lunarpedia");
+const ROOT_MMM = resolve(ROOT, "assets/mmm");
 const ROOT_FAVICONS = resolve(ROOT, "assets/favicons");
 
 const PUBLIC_LOGOS = resolve(PUBLIC, "assets/logos");
 const PUBLIC_LDC = resolve(PUBLIC, "assets/ldc");
+const PUBLIC_LUNARPEDIA = resolve(PUBLIC, "assets/lunarpedia");
+const PUBLIC_MMM = resolve(PUBLIC, "assets/mmm");
 const PUBLIC_DOWNLOADS = resolve(PUBLIC, "assets/downloads");
 
 // Files included in the logo bundle zip (the production-ready variants).
 const BUNDLE_LOGOS = [
+  "MoonSocietyLogo2026_larger.png",
   "MoonSoc_TransWhite_Print.png",
   "MoonSocLogo-Trans-440x190.png",
   "MoonSoc_TransBlack_Print.png",
@@ -151,6 +156,8 @@ async function main() {
   const results = [];
   results.push(...(await syncDir(ROOT_LOGOS, PUBLIC_LOGOS, "assets/logos")));
   results.push(...(await syncDir(ROOT_LDC, PUBLIC_LDC, "assets/ldc")));
+  results.push(...(await syncDir(ROOT_LUNARPEDIA, PUBLIC_LUNARPEDIA, "assets/lunarpedia")));
+  results.push(...(await syncDir(ROOT_MMM, PUBLIC_MMM, "assets/mmm")));
 
   const faviconSrc = resolve(ROOT_FAVICONS, "favicon.svg");
   if (await exists(faviconSrc)) {

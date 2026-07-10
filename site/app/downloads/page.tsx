@@ -12,6 +12,7 @@ const downloadCategories = [
     icon: ImageIcon,
     description: "Moon Society wordmark variants",
     items: [
+      { name: "Canonical Logo 2026 (PNG)", format: "PNG", size: "~35 KB", url: "/assets/logos/MoonSocietyLogo2026_larger.png", preview: "/assets/logos/MoonSocietyLogo2026_larger.png", previewBg: "dark" as const },
       { name: "Primary (White, PNG)", format: "PNG", size: "~99 KB", url: "/assets/logos/MoonSoc_TransWhite_Print.png", preview: "/assets/logos/MoonSoc_TransWhite_Print.png", previewBg: "dark" as const },
       { name: "Primary (Black, PNG)", format: "PNG", size: "~23 KB", url: "/assets/logos/MoonSocLogo-Trans-440x190.png", preview: "/assets/logos/MoonSocLogo-Trans-440x190.png" },
       { name: "Black Print (PNG)", format: "PNG", size: "~100 KB", url: "/assets/logos/MoonSoc_TransBlack_Print.png", preview: "/assets/logos/MoonSoc_TransBlack_Print.png" },
@@ -26,6 +27,16 @@ const downloadCategories = [
     description: "Lunar Development Conference 2026 mark",
     items: [
       { name: "LDC 2026 Logo (SVG)", format: "SVG", size: "~23 KB", url: "/assets/ldc/ldc-2026-logo.svg", preview: "/assets/ldc/ldc-2026-logo.svg", previewBg: "dark" as const },
+    ],
+  },
+  {
+    title: "MMM Sub-brand",
+    icon: ImageIcon,
+    description: "Moon Miners' Manifesto marks",
+    items: [
+      { name: "MMM Moon Mark (PNG)", format: "PNG", size: "~1080px", url: "/assets/mmm/MoonLogo_MMM_3811_01_1080px.png", preview: "/assets/mmm/MoonLogo_MMM_3811_01_1080px.png", previewBg: "dark" as const },
+      { name: "MMM Masthead Horizontal (PNG)", format: "PNG", size: "400×133", url: "/assets/mmm/MMM_Scape_0914_02_400px.png", preview: "/assets/mmm/MMM_Scape_0914_02_400px.png" },
+      { name: "MMM Masthead Vertical (PNG)", format: "PNG", size: "400×233", url: "/assets/mmm/MMM_Vert_0914_02_400px.png", preview: "/assets/mmm/MMM_Vert_0914_02_400px.png" },
     ],
   },
   {
