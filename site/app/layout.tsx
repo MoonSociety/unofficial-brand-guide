@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Syne, League_Spartan, Noto_Sans, Inconsolata } from "next/font/google";
+import { League_Spartan, Noto_Sans, Spectral, Inconsolata } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,13 +8,6 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { organizationInfo } from "@/lib/brand-data";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-  variable: "--font-syne",
-  display: "swap",
-});
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -27,6 +20,14 @@ const notoSans = Noto_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-noto-sans",
+  display: "swap",
+});
+
+const spectral = Spectral({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-spectral",
   display: "swap",
 });
 
@@ -111,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${leagueSpartan.variable} ${notoSans.variable} ${inconsolata.variable}`}
+      className={`${leagueSpartan.variable} ${notoSans.variable} ${spectral.variable} ${inconsolata.variable}`}
       suppressHydrationWarning
     >
       <body className="font-sans antialiased">

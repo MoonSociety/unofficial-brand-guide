@@ -1,27 +1,149 @@
 {
   "$schema": "./schemas/brand-v2.json#/properties/colors",
+  "$comment": "GENERATED from brand.json by scripts/generate-derived.mjs — do not hand-edit.",
   "primary": [
-    { "name": "Space Cadet Blue", "token": "--ms-space-cadet", "hex": "#13294B" },
-    { "name": "Gold",             "token": "--ms-gold",        "hex": "#FFCD00" }
+    {
+      "name": "Space Cadet Blue",
+      "token": "--ms-space-cadet",
+      "hex": "#13294B"
+    },
+    {
+      "name": "Gold",
+      "token": "--ms-gold",
+      "hex": "#FFCD00"
+    }
   ],
   "secondary": [
-    { "name": "Cerulean", "token": "--ms-cerulean", "hex": "#00A3E0" },
-    { "name": "Blue",     "token": "--ms-blue",     "hex": "#006298" },
-    { "name": "Cyan",     "token": "--ms-cyan",     "hex": "#6AD1E3" },
-    { "name": "Emerald",  "token": "--ms-emerald",  "hex": "#009775" }
+    {
+      "name": "Cerulean",
+      "token": "--ms-cerulean",
+      "hex": "#00A3E0"
+    },
+    {
+      "name": "Blue",
+      "token": "--ms-blue",
+      "hex": "#006298"
+    },
+    {
+      "name": "Cyan",
+      "token": "--ms-cyan",
+      "hex": "#6AD1E3"
+    },
+    {
+      "name": "Emerald",
+      "token": "--ms-emerald",
+      "hex": "#009775"
+    }
   ],
   "neutral": [
-    { "name": "White",       "token": "--ms-white",      "hex": "#FFFFFF" },
-    { "name": "Cool Gray 2", "token": "--ms-gray-100",   "hex": "#D0D0CE" },
-    { "name": "Cool Gray 5", "token": "--ms-gray-200",   "hex": "#B1B3B3" },
-    { "name": "Cool Gray 8", "token": "--ms-gray-300",   "hex": "#888B8D" },
-    { "name": "Cool Gray 11","token": "--ms-gray-400",   "hex": "#53565A" },
-    { "name": "Near-Black",  "token": "--ms-near-black",  "hex": "#1D252D" },
-    { "name": "Black",       "token": "--ms-black",       "hex": "#000000" }
+    {
+      "name": "White",
+      "token": "--ms-white",
+      "hex": "#FFFFFF"
+    },
+    {
+      "name": "Cool Gray 2",
+      "token": "--ms-gray-100",
+      "hex": "#D0D0CE"
+    },
+    {
+      "name": "Cool Gray 5",
+      "token": "--ms-gray-200",
+      "hex": "#B1B3B3"
+    },
+    {
+      "name": "Cool Gray 8",
+      "token": "--ms-gray-300",
+      "hex": "#888B8D"
+    },
+    {
+      "name": "Cool Gray 11",
+      "token": "--ms-gray-400",
+      "hex": "#53565A"
+    },
+    {
+      "name": "Near-Black",
+      "token": "--ms-near-black",
+      "hex": "#1D252D"
+    },
+    {
+      "name": "Black",
+      "token": "--ms-black",
+      "hex": "#000000"
+    }
   ],
   "semantic": [
-    { "name": "Success", "token": "--ms-success", "hex": "#009775" },
-    { "name": "Warning", "token": "--ms-warning", "hex": "#D29F13" },
-    { "name": "Error",   "token": "--ms-error",   "hex": "#E84855" }
+    {
+      "name": "Success",
+      "token": "--ms-success",
+      "hex": "#009775"
+    },
+    {
+      "name": "Warning",
+      "token": "--ms-warning",
+      "hex": "#D29F13"
+    },
+    {
+      "name": "Error",
+      "token": "--ms-error",
+      "hex": "#E84855"
+    }
+  ],
+  "extended": [
+    {
+      "name": "Light Gold",
+      "token": "--ms-gold-light",
+      "hex": "#FAE053"
+    },
+    {
+      "name": "Dark Gold",
+      "token": "--ms-gold-dark",
+      "hex": "#D29F13"
+    },
+    {
+      "name": "Brownish Gold",
+      "token": "--ms-gold-brown",
+      "hex": "#967126"
+    },
+    {
+      "name": "Warm Gray 1",
+      "token": "--ms-warm-gray-1",
+      "hex": "#D7D2CB"
+    },
+    {
+      "name": "Warm Gray 7",
+      "token": "--ms-warm-gray-7",
+      "hex": "#968C83"
+    },
+    {
+      "name": "Grayish Brown",
+      "token": "--ms-gray-brown",
+      "hex": "#5E514D"
+    },
+    {
+      "name": "Brown",
+      "token": "--ms-brown",
+      "hex": "#382F2D"
+    },
+    {
+      "name": "Pinkish Off-White",
+      "token": "--ms-off-white-pink",
+      "hex": "#E5E1E6"
+    },
+    {
+      "name": "Chaise Mauve",
+      "token": "--ms-mauve",
+      "hex": "#C1B2B6"
+    },
+    {
+      "name": "Lavender",
+      "token": "--ms-lavender",
+      "hex": "#7B6469"
+    },
+    {
+      "name": "Dark Cherry",
+      "token": "--ms-dark-cherry",
+      "hex": "#453536"
+    }
   ]
 }

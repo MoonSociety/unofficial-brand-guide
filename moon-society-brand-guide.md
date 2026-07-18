@@ -60,6 +60,8 @@ The Moon Society logo is a horizontal wordmark featuring the text "THE MOON SOCI
 
 The **canonical Moon Society wordmark** is the vector file [`assets/logos/MoonSocietyLogo2014.svg`](assets/logos/MoonSocietyLogo2014.svg), maintained upstream at `https://strabo.moonsociety.org/images/moonsoc-logo/MoonSocietyLogo2014.svg`. Use this SVG anywhere SVG is supported, and as the master for generating any new raster sizes. The companion disc/face-only mark is [`assets/logos/TMS_LOGO_Face_Only_S619_01.svg`](assets/logos/TMS_LOGO_Face_Only_S619_01.svg) (favicons, avatars, small icons).
 
+The **canonical raster logo** is [`assets/logos/MoonSocietyLogo2026_larger.png`](assets/logos/MoonSocietyLogo2026_larger.png) (2026 re-upload, 1580×646, transparent background), maintained upstream at `https://www.moonsociety.org/wp-content/uploads/2026/07/MoonSocietyLogo2026_larger.png`. This exact asset is the site-wide header/footer lockup on www.moonsociety.org (as of 2026-07-06) — use it for any raster placement in preference to the legacy PNG/JPG exports in the inventory below.
+
 > **Important:** The canonical SVG does **not** render a visible trademark (™) glyph. Several legacy raster files in the inventory below *do* include a ™ — those are **non-canonical**. Prefer the canonical SVG; do not add a ™ to it. A dedicated light-background SVG (dark wordmark text) is not yet available — for light backgrounds use the transparent black-text PNGs below until a light SVG is produced from the vector source.
 
 ### Logo File Inventory
@@ -189,25 +191,25 @@ These colors are available for specific applications such as data visualization,
 
 The Moon Society uses five typeface roles. Each serves a distinct purpose, and they should not be used interchangeably.
 
-### Display / Decorative Headlines — Syne
+### Display / Decorative Headlines — League Spartan
 
 **Use for:** Hero headlines, event titles, large promotional text, and display-size content where visual impact matters most.
 
-**Source:** [Google Fonts — Syne](https://fonts.google.com/specimen/Syne)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
-**Weights available:** 400 (Regular) through 800 (Extra Bold). Prefer 700 or 800 at display sizes.
+**Weights available:** 400 (Regular) through 900 (Black). Prefer 800 (Extra Bold) at display sizes.
 
-**Guidance:** Syne works best at 32px and above. It has strong personality at large sizes but loses clarity at body text sizes. Do not use Syne for body text or UI labels.
+**Guidance:** Display and headings now share **one family — League Spartan** — so the distinction is weight and size, not typeface. Set display headlines at 32px and above in weight 800 with tight tracking (−0.02em). This unifies the brand on a single geometric sans and replaces the former **Syne** display face (retired in the 2026 direction; see moonsociety.org). Do not reintroduce Syne or a second display typeface.
 
-### Headings — Spartan
+### Headings — League Spartan
 
 **Use for:** Section headings (H1 through H6), navigation labels, button text, and any structural heading that is not a display/hero headline.
 
-**Source:** [Google Fonts — Spartan](https://fonts.google.com/specimen/League+Spartan) (League Spartan is the single-weight FOSS implementation; Spartan MB provides seven weights)
+**Source:** [Google Fonts — League Spartan](https://fonts.google.com/specimen/League+Spartan)
 
 **Weights:** Prefer 600 (Semibold) or 700 (Bold) for headings. 400 (Regular) may be used for navigation and smaller UI headings.
 
-**Guidance:** Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
+**Guidance:** League Spartan is a geometric sans-serif with clean, modern proportions. It pairs well with Noto Sans at body sizes. All-caps settings work well for short labels but should be avoided for headings longer than a few words.
 
 ### Body Text — Noto Sans
 
@@ -219,13 +221,13 @@ The Moon Society uses five typeface roles. Each serves a distinct purpose, and t
 
 **Guidance:** Set body text between 16px and 18px with a line height of 1.5 to 1.6. Noto Sans has a distinguishing capital "I" with serifs, which aids readability and accessibility.
 
-### Serif / Editorial — Palatino / Palladio
+### Serif / Editorial — Spectral
 
 **Use for:** Long-form editorial content, pull quotes, formal documents, and print publications where a serif typeface is appropriate.
 
-**Source:** System font stack (see Design Specification for full stack). TeX Gyre Pagella is the FOSS redistributable implementation.
+**Source:** [Google Fonts — Spectral](https://fonts.google.com/specimen/Spectral). Delivered via the Google Fonts CDN with a `Georgia, "Times New Roman", serif` fallback chain for first paint.
 
-**Guidance:** This typeface connects to the Moon Society's publishing heritage. Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for screens.
+**Guidance:** Spectral is a contemporary screen-first serif that gives editorial surfaces a publishing voice while staying legible on screen. It replaces the former **Palatino / TeX Gyre Pagella** system-serif stack as part of the 2026 move to CDN-delivered Google Fonts (no system or self-hosted faces). Use it for the newsletter, whitepapers, and formal correspondence. It is not the default for web body text; Noto Sans is preferred for general screen reading.
 
 ### Monospace — Inconsolata
 
@@ -406,7 +408,7 @@ do not use Cerulean (`#00A3E0`) for normal-size text on white.
 ### Typography
 
 Lunarpedia follows the **Vector 2022 type system**, which differs deliberately from the
-parent guide (Syne/Spartan are display faces ill-suited to dense reference reading):
+parent guide (League Spartan is a display/heading face ill-suited to dense reference reading):
 
 - **Headings (h1 page title, h2 section rules) — serif.** Vector 2022 sets content
   headings in a serif stack: `'Linux Libertine', 'Georgia', 'Times', serif`. This is the
@@ -421,7 +423,7 @@ parent guide (Syne/Spartan are display faces ill-suited to dense reference readi
   length ≈ 960px). Do not widen body line length for prose — the limited-width reading
   mode is a feature, not a bug.
 
-Do **not** force Syne or League Spartan into article body or headings; they belong to
+Do **not** force League Spartan into article body or headings; it belongs to
 Moon Society marketing surfaces, not the encyclopedia.
 
 ### Application Guidance
@@ -438,7 +440,7 @@ Moon Society marketing surfaces, not the encyclopedia.
 
 **Don't:**
 
-- Don't restyle article body text in Syne/Spartan or in brand gold/blue.
+- Don't restyle article body text in League Spartan or in brand gold/blue.
 - Don't replace wiki link colors with Cerulean inside content.
 - Don't recolor or add a ™ to the open-book mark.
 - Don't treat the old local Metrolook/MW 1.34 copy as the brand target — it is a backup.
@@ -446,12 +448,94 @@ Moon Society marketing surfaces, not the encyclopedia.
 
 ---
 
+## Sub-Brand: Moon Miners' Manifesto
+
+Moon Miners' Manifesto — "MMM" — (<https://www.moonmanifesto.com>) is the Moon
+Society's lunar settlement journal, founded and long edited by Peter Kokh and
+publishing since December 1986. The full archive lives online as a WordPress site
+organized by category (Announcements, Designs, Discussion, Habitats, History,
+In Focus, News, Planning, Reports), with header cross-links to The Moon Society,
+Lunarpedia, and Luna City Press. It is a sub-brand of the Moon Society: the
+publication keeps its own masthead art and warm editorial neutrals while building
+on the parent palette and type system.
+
+> **Platform context.** The archive site runs WordPress with a custom theme named
+> **Corolis** (the installed theme's own header currently reads "Crocco for MMM"
+> v0.4, by James Gholston, released public domain / CC0). It is a CSS Grid layout
+> with deliberate `inline-block` and `float` fallbacks — designed, in its own words,
+> to be "highly shatter-resistant" on legacy browsers. `moonmanifesto.org`
+> 301-redirects to `moonmanifesto.com`; use the `.com` as the canonical URL.
+
+### Identity
+
+- **Name:** Moon Miners' Manifesto (note the apostrophe: *Miners'*, plural
+  possessive). Abbreviate as **MMM** only after first use — never "MMM" cold in
+  public-facing copy (see Voice rules).
+- **Tagline:** *"The Moon Society's lunar settlement journal — publishing since 1986."*
+- **Relationship to parent:** The Society's flagship publication. Footer copyright
+  reads "Copyright 1986–present by Moon Society Incorporated and other parties";
+  both "Moon Miners' Manifesto" and the Moon Society marks are Society trademarks.
+
+### Logo
+
+| File | Description | Use |
+|------|-------------|-----|
+| [`assets/mmm/MoonLogo_MMM_3811_01_1080px.png`](assets/mmm/MoonLogo_MMM_3811_01_1080px.png) | Square MMM Moon mark, 1080×1080 PNG, transparent background. | Avatars, social cards, category badges, any square placement. |
+| [`assets/mmm/MMM_Scape_0914_02_400px.png`](assets/mmm/MMM_Scape_0914_02_400px.png) | Horizontal masthead lockup (400×133). | Site header on wide viewports; letterhead-style placements. |
+| [`assets/mmm/MMM_Vert_0914_02_400px.png`](assets/mmm/MMM_Vert_0914_02_400px.png) | Vertical/stacked masthead lockup (400×233). | Narrow viewports and portrait placements. |
+
+### Color System
+
+The MMM archive is a **light editorial reading surface** — closer to a newspaper than
+to the parent site's dark Space Cadet surfaces. It uses the full parent core palette
+plus its own warm "regolith" neutrals; treat the additions as sub-brand-local, not
+parent tokens.
+
+| Role | Hex | Notes |
+|------|-----|-------|
+| Body text | `#000000` / `#453536` | Black for body; warm ink for editorial headers |
+| Content background | `#FFFFFF` | Article surface |
+| Container / band background | `#E5E1E6` | Sidebar, panel, and gradient-band background |
+| Links | `#006298` | Parent brand Blue (not Cerulean) on the light surface |
+| Accents | `#FFCD00`, `#6AD1E3` | Parent Gold and Cyan for highlights and badges |
+| Masthead / brand chrome | `#13294B` | Parent Space Cadet Blue |
+| Borders | `#C1B2B6` | Warm regolith gray |
+| Shadows / muted | `#968C83` | Warm text-shadow and muted elements |
+| Highlight | `#FAE053` | Marked/selected text |
+
+**Contrast note:** parent rules stay in force — Gold is never text on white; the link
+color on white is Blue `#006298` (AA), not Cerulean.
+
+### Typography
+
+MMM predates the 2026 brand system and shows its lineage:
+
+- **Headings — Spartan MB**, self-hosted webfonts (the open predecessor of League
+  Spartan). Visually continuous with the parent's League Spartan; new MMM materials
+  may use League Spartan directly.
+- **Body — Noto Sans**, matching the parent brand body face.
+- **Serif — Palatino stack** for editorial passages. This is a deliberate archival
+  holdover: the parent brand's serif is now Spectral, but the MMM archive retains
+  Palatino for continuity with the print-era journal.
+- **Monospace — Inconsolata**, matching the parent brand.
+
+**Don't:**
+
+- Don't drop the apostrophe ("Moon Miners Manifesto") or singularize ("Moon Miner's").
+- Don't set Gold text on the white reading surface.
+- Don't swap the archive's Palatino serif to Spectral retroactively — the holdover is
+  intentional; use Spectral only for new, parent-branded MMM materials.
+- Don't promote the regolith neutrals (`#453536`, `#C1B2B6`, `#968C83`) into parent-brand
+  work; they belong to MMM's editorial surface.
+
+---
+
 ## What This Guide Does Not Cover
 
-This guide addresses the parent Moon Society brand and the Lunarpedia sub-brand (above).
-Other sub-brands and affiliated properties (Lunar Development Conference, Moon Miners'
-Manifesto, Luna City Press, Mare Cognitum, and chapter/outpost identities) will be
-addressed in a future supplement. Until then, those sub-brands should use the parent
+This guide addresses the parent Moon Society brand and the Lunarpedia and Moon Miners'
+Manifesto sub-brands (above). Other sub-brands and affiliated properties (Lunar
+Development Conference, Luna City Press, Mare Cognitum, and chapter/outpost identities)
+will be addressed in a future supplement. Until then, those sub-brands should use the parent
 color palette and typography system as a baseline while maintaining their own identity
 marks.
 

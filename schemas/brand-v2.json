@@ -87,11 +87,31 @@
         }
       }
     },
+    "tokens": {
+      "type": "object",
+      "description": "Design tokens beyond color/font-family (font-size scale, weights, line-height, letter-spacing, spacing, radius, shadow, transition, layout). Single source for the generated colors.css/tokens.json. Each leaf is a {value, cssVar, usage?} record.",
+      "properties": {
+        "$comment": { "type": "string" }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": ["value", "cssVar"],
+          "additionalProperties": false,
+          "properties": {
+            "value": { "type": ["string", "number"] },
+            "cssVar": { "type": "string", "pattern": "^--[a-z][a-z0-9-]*$" },
+            "usage": { "type": "string" }
+          }
+        }
+      }
+    },
     "logos": {
       "type": "object",
       "description": "Map of logo variants by id. Plus a 'rules' object with usage constraints.",
       "patternProperties": {
-        "^[a-z][a-zA-Z0-9_-]*$": {
+        "^(?!rules$)[a-z][a-zA-Z0-9_-]*$": {
           "type": "object",
           "required": ["file", "background", "description"],
           "additionalProperties": false,
@@ -100,6 +120,8 @@
             "svg": { "type": "string" },
             "format": { "type": "string" },
             "background": { "type": "string", "enum": ["light", "dark", "any"] },
+            "canonical": { "type": "boolean" },
+            "source": { "type": "string" },
             "deprecated": { "type": "boolean" },
             "description": { "type": "string" }
           }
@@ -158,14 +180,25 @@
           "format": { "type": "string" },
           "theme": { "type": "string" },
           "website": { "type": "string", "format": "uri" },
+          "platform": { "type": "string" },
           "logo": { "type": "string" },
+          "logoBanner": { "type": "string" },
+          "readingSurface": { "type": "object" },
+          "typography": { "type": "object" },
           "inherits": { "type": "string" }
         }
       }
     },
     "resources": {
       "type": "object",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": { "type": "string" },
+      "properties": {
+        "versioned": {
+          "type": "object",
+          "description": "Immutable version-pinned URLs (e.g. /v2/brand.json).",
+          "additionalProperties": { "type": "string" }
+        }
+      }
     }
   },
   "$defs": {

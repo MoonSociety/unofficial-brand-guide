@@ -22,7 +22,18 @@ function googleImport(spec: TypographySpec): string | null {
 export function TypographySpecimen({ spec }: TypographySpecimenProps) {
   const cssImport = googleImport(spec);
   const cssFontFamily = `font-family: "${spec.fontFamily}", ${spec.fallback.join(", ")};`;
-  const fontStack = `"${spec.fontFamily}", ${spec.fallback.join(", ")}`;
+  // Preview uses the actually-loaded webfont (next/font CSS vars from globals.css)
+  // so specimens render in the real brand face, not a system fallback. The
+  // copyable CSS above still shows the canonical font-family stack.
+  const previewVar =
+    ({
+      Display: "var(--font-display)",
+      Headings: "var(--font-heading)",
+      Body: "var(--font-body)",
+      Serif: "var(--font-serif)",
+      Monospace: "var(--font-mono)",
+    } as Record<string, string>)[spec.name] ?? "var(--font-sans)";
+  const fontStack = `${previewVar}, "${spec.fontFamily}", ${spec.fallback.join(", ")}`;
 
   return (
     <Card className="overflow-visible" data-testid={`typography-specimen-${spec.name.toLowerCase()}`}>

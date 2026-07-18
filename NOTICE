@@ -1,0 +1,40 @@
+The Moon Society — Brand & Asset Notice
+========================================
+
+This repository is an UNOFFICIAL, community-maintained reference for the
+visual identity of The Moon Society. It is not published or endorsed by
+The Moon Society, Incorporated.
+
+Two different sets of terms apply to the contents of this repository:
+
+1. CODE & TOOLING — MIT licensed (see LICENSE)
+   The following are provided for community use under the MIT License:
+     - scripts/        (generators, validators)
+     - schemas/        (JSON Schema for the manifest)
+     - site/           (the Next.js showcase site)
+     - the format/structure of the machine-readable manifests
+       (brand.json, llms.txt, colors.css, colors.json, tokens.json)
+
+2. BRAND & LOGO ASSETS — NOT licensed for reuse
+   The following remain the property of The Moon Society, Incorporated, and
+   are NOT covered by the MIT License:
+     - assets/logos/        (all Moon Society wordmarks and marks)
+     - assets/favicons/
+     - assets/ldc/          (LDC sub-brand mark)
+     - assets/lunarpedia/   (Lunarpedia marks)
+     - The Moon Society name, the Moon Society logo, "Lunar Development
+       Conference"/"LDC", and "Lunarpedia" as marks.
+
+   "The Moon Society" and the Moon Society logo are trademarks of
+   The Moon Society, Incorporated. The logo and brand assets are provided
+   here for reference and for use in producing legitimate, on-brand Moon
+   Society materials. They may not be used in a way that implies endorsement,
+   affiliation, or sponsorship, nor modified contrary to the usage rules in
+   brand.json / moon-society-brand-guide.md.
+
+   For permission to use the Moon Society brand or logos outside of producing
+   Moon Society materials, contact info@moonsociety.org.
+
+Color values (hex codes) and factual brand information are not themselves
+subject to copyright; the trademark and asset terms above govern the logos,
+names, and visual marks.
